@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4360270325224811336}
   - component: {fileID: 4360270325224811337}
   - component: {fileID: 1716426244}
+  - component: {fileID: 6667758430010500223}
+  - component: {fileID: -7864176521113189994}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -110,5 +112,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8101d10596fb24f9865134018c6a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 2.5
   target: {fileID: 0}
+--- !u!114 &6667758430010500223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360270325224810678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628a59c8847e5824aa91e42d88abf4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+--- !u!54 &-7864176521113189994
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360270325224810678}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2

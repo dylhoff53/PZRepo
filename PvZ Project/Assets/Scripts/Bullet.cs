@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     public float maxLife;
     public float lifeCounter = 0f;
     public GameObject impactEffect;
+    public float explosionRadius = 0f;
+    public int damage;
 
     // Update is called once per frame
     void Update()
@@ -28,8 +30,34 @@ public class Bullet : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
 
+        if (explosionRadius > 0f)
+        {
+            Explode();
+        }else
+        {
+            if (other.tag == "Enemy")
+            {
+                other.GetComponent<Enemy>().Hit(damage);
+            }
+        }
         Destroy(gameObject);
     }
 
+    public void Explode()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+        foreach(Collider collider in colliders)
+        {
+            if(collider.tag == "Enemy")
+            {
+                collider.GetComponent<Enemy>().Hit(damage);
+            }
+        }
+    }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
 }
