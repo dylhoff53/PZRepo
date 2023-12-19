@@ -52,11 +52,11 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        if (currentInput > 0f && transform.position.x < 5f)
+        if (currentInput > 0f && transform.position.x < 8.5f)
         {
             currentInput = 1f;
         }
-        else if (currentInput < 0 && transform.position.x > 0)
+        else if (currentInput < 0 && transform.position.x > 6.5f)
         {
             currentInput = -1f;
         }else

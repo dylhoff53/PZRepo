@@ -18,6 +18,7 @@ public class BuildManager : MonoBehaviour
 
     public GameObject standardTurretPrefab;
     public GameObject otherTurretPrefab;
+    public GameObject moneyFactoryPrefab;
 
 
     private TurretBluePrint turretToBuild;

@@ -6,6 +6,7 @@ public class Shop : MonoBehaviour
 {
     public TurretBluePrint standardTurret;
     public TurretBluePrint missleLauncher;
+    public TurretBluePrint moneyFactory;
     BuildManager buildManager;
 
     private void Start()
@@ -22,5 +23,11 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Other Turret Selected");
         buildManager.SelectTurretToBuild(missleLauncher);
+    }
+
+    public void SelectMoneyFactory()
+    {
+        Debug.Log("Money Factory Selected");
+        buildManager.SelectTurretToBuild(moneyFactory);
     }
 }
