@@ -6,8 +6,9 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    [Header("Optional")]
+    public GameObject tower;
 
-    private GameObject tower;
     public Vector3 positionOffset;
 
 
@@ -24,9 +25,17 @@ public class Node : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
+    }
+
     public void OnMouseDown()
     {
-        if (buildManager.GetTurrtToBuild() == null)
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (!buildManager.CanBuild)
             return;
 
         if(tower != null)
@@ -35,8 +44,7 @@ public class Node : MonoBehaviour
             return;
         }
 
-        GameObject turrretToBuild = buildManager.GetTurrtToBuild();
-        tower = (GameObject)Instantiate(turrretToBuild, transform.position + positionOffset, transform.rotation);
+        buildManager.BuildTurretOn(this);
     }
 
     public void OnMouseEnter()
@@ -44,7 +52,7 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (buildManager.GetTurrtToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
 
         rend.material.color = hoverColor;
