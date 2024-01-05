@@ -20,10 +20,13 @@ public class BuildManager : MonoBehaviour
     public GameObject otherTurretPrefab;
     public GameObject moneyFactoryPrefab;
 
+    public GameObject buildEffect;
+
 
     private TurretBluePrint turretToBuild;
 
     public bool CanBuild { get { return turretToBuild != null; } }
+    public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
     public void BuildTurretOn(Node node)
     {
@@ -34,10 +37,16 @@ public class BuildManager : MonoBehaviour
         }
 
         PlayerStats.Money -= turretToBuild.cost;
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), node.transform.rotation);
+        GameObject turret = Instantiate(turretToBuild.prefab, node.GetBuildPosition(), node.transform.rotation);
         node.tower = turret;
 
+        turret.transform.GetChild(0).gameObject.GetComponent<Turret>().node = node;
+
+        GameObject effect = Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 3f);
+
         Debug.Log("Turret build! Money left: " + PlayerStats.Money);
+
     }
 
     public void SelectTurretToBuild(TurretBluePrint turret)

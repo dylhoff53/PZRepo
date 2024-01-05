@@ -6,17 +6,21 @@ public class EnemyMovement : MonoBehaviour
 {
     public float speed = 5f;
     public Transform target;
+    public Enemy enemy;
 
 
     private void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
-        if(Vector3.Distance(transform.position, target.position) <= 0.3f)
+        if(enemy.isMoving)
         {
-            Destroy(gameObject);
-            Debug.Log("Die!");
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
+            if (Vector3.Distance(transform.position, target.position) <= 0.3f)
+            {
+                Destroy(gameObject);
+                Debug.Log("Die!");
+            }
         }
     }
 }

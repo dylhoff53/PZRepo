@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2954465936424972995}
   - component: {fileID: 2954465936424972992}
   - component: {fileID: -2381017328198919203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 57c871e9c0b8211479f49070ce8b17ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,5 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
+  notEnoughMoneyColor: {r: 0.8584906, g: 0.21462265, b: 0.21462265, a: 0}
   tower: {fileID: 0}
-  positionOffset: {x: 0, y: 1, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
