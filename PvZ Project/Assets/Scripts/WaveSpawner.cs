@@ -5,8 +5,10 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
     public Transform[] spawns;
+
+    [SerializeField]
+    public EnemyType[] typesOfEnemies;
 
     public float timeBetweenWaves;
     private float countdown = 2f;
@@ -21,6 +23,7 @@ public class WaveSpawner : MonoBehaviour
     private int waveIndex = 0;
 
     public float[] weights;
+    public float[] enemyWeights;
 
     private void Start()
     {
@@ -28,6 +31,16 @@ public class WaveSpawner : MonoBehaviour
         {
             spawnTimes.Enqueue(spawnInters[i]);
         }
+
+        /*
+        float baseEnemyWeight = 1f / typesOfEnemies.Length;
+        enemyWeights = new float[typesOfEnemies.Length];
+        Debug.Log(baseEnemyWeight);
+        for (int j = 0; j < enemyWeights.Length; j++)
+        {
+            enemyWeights[j] = baseEnemyWeight;
+        }
+        */
     }
 
     void Update()
@@ -65,25 +78,32 @@ public class WaveSpawner : MonoBehaviour
     }
 
     void SpawnEnemy()
-    { 
-        float spawnNumber = Random.Range(0f, 1f);
-        spawnNumber = Mathf.Round(spawnNumber * 100f) / 100f;
-        Debug.Log(spawnNumber);
-        int spawnLane = LaneCheck(spawnNumber);
+    {
 
-        UpdateWeights(spawnLane, 0.1f);
-        Transform enemy = Instantiate(enemyPrefab, spawns[spawnLane].GetComponent<Lane>().spawn.position, spawns[spawnLane].GetComponent<Lane>().spawn.rotation);
+        float spawnNumber = Random.Range(0f, 1f);
+        float enemyChoice = Random.Range(0f, 1f);
+
+        spawnNumber = Mathf.Round(spawnNumber * 100f) / 100f;
+        enemyChoice = Mathf.Round(enemyChoice * 100f) / 100f;
+        Debug.Log("Spawn Number" + spawnNumber);
+        Debug.Log("Enemy Choice" + enemyChoice);
+        int spawnLane = PercentCheck(spawnNumber, weights);
+        int chosenEnemyType = PercentCheck(enemyChoice, enemyWeights);
+
+        UpdateWeights(spawnLane, typesOfEnemies[chosenEnemyType].laneWeight, weights);
+        UpdateWeights(chosenEnemyType, typesOfEnemies[chosenEnemyType].weight, enemyWeights);
+        GameObject enemy = Instantiate(typesOfEnemies[chosenEnemyType].enemyPrefab, spawns[spawnLane].GetComponent<Lane>().spawn.position, spawns[spawnLane].GetComponent<Lane>().spawn.rotation);
         enemy.GetComponent<EnemyMovement>().target = spawns[spawnLane].GetComponent<Lane>().target;
     }
 
 
-    public int LaneCheck(float chosenNumber)
+    public int PercentCheck(float chosenNumber, float[] weightArray)
     {
         int calcLane = 0;
         float valueChecker = 0f;
-        for (int i = 0; i < weights.Length; i++)
+        for (int i = 0; i < weightArray.Length; i++)
         {
-            valueChecker += weights[i];
+            valueChecker += weightArray[i];
             if (chosenNumber <= valueChecker)
             {
                 calcLane = i;
@@ -94,16 +114,16 @@ public class WaveSpawner : MonoBehaviour
     }
 
 
-    public void UpdateWeights(int lane, float weightChange)
+    public void UpdateWeights(int lane, float weightChange, float[] weightArray)
     {
-        for(int i = 0; i < weights.Length; i++)
+        for(int i = 0; i < weightArray.Length; i++)
         {
             if(lane == i)
             {
-                weights[i] -= weightChange;
+                weightArray[i] -= weightChange;
             }else
             {
-                weights[i] += weightChange / 4;
+                weightArray[i] += weightChange / 4;
             }
         }
     }
