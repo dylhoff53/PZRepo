@@ -144,10 +144,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
+  fireCountdown: 0
   damage: 1
   isWall: 1
+  isMelee: 0
+  targetInRange: 0
+  isAOE: 0
+  health: 10
   bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 0}
+  meleePoint: {fileID: 0}
+  meleeLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  meleeDetector: {fileID: 0}
+  node: {fileID: 0}
 --- !u!1 &8504749209596296505
 GameObject:
   m_ObjectHideFlags: 0

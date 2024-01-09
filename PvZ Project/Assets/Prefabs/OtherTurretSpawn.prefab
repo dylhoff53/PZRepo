@@ -274,15 +274,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582be0f0cdbbc324a940b6b6572a3ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 3.5
+  fireRate: 4
   fireCountdown: 0
-  damage: 1
+  damage: 3
   isWall: 0
   isMelee: 0
   targetInRange: 0
   isAOE: 0
   health: 3
-  bulletPrefab: {fileID: 7871787807392035261, guid: e3ce5745e1913d04eb2d7339a2e261d0, type: 3}
+  bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 8879355969347654659}
   meleePoint: {fileID: 0}
   meleeLayerMask:

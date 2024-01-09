@@ -75,6 +75,7 @@ public class Enemy : MonoBehaviour
     public void Death()
     {
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        WaveSpawner.numOfAliveEnemies--;
         Destroy(effect, 3f);
         Destroy(gameObject);
     }

@@ -125,6 +125,8 @@ MonoBehaviour:
   detector: {fileID: 4704680948186813759}
   meleePoint: {fileID: 4704680947271120548}
   targetTurret: {fileID: 0}
+  parent: {fileID: 3709930960452933684}
+  waveSpawner: {fileID: 0}
 --- !u!54 &2423085668069281005
 Rigidbody:
   m_ObjectHideFlags: 0

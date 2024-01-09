@@ -24,6 +24,7 @@ public class WaveSpawner : MonoBehaviour
 
     public float[] weights;
     public float[] enemyWeights;
+    public static int numOfAliveEnemies;
 
     private void Start()
     {
@@ -56,7 +57,7 @@ public class WaveSpawner : MonoBehaviour
             }
 
             spawnTimer += Time.deltaTime;
-        } else
+        } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0)
         {
             outOfEnemies = true;
         }
@@ -92,6 +93,7 @@ public class WaveSpawner : MonoBehaviour
 
         UpdateWeights(spawnLane, typesOfEnemies[chosenEnemyType].laneWeight, weights);
         UpdateWeights(chosenEnemyType, typesOfEnemies[chosenEnemyType].weight, enemyWeights);
+        numOfAliveEnemies++;
         GameObject enemy = Instantiate(typesOfEnemies[chosenEnemyType].enemyPrefab, spawns[spawnLane].GetComponent<Lane>().spawn.position, spawns[spawnLane].GetComponent<Lane>().spawn.rotation);
         enemy.GetComponent<EnemyMovement>().target = spawns[spawnLane].GetComponent<Lane>().target;
     }

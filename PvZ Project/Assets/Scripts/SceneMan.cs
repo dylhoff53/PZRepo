@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class SceneMan : MonoBehaviour
 {
     private bool gameEnded = false;
     public bool Died;

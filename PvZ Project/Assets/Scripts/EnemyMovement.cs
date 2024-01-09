@@ -18,8 +18,9 @@ public class EnemyMovement : MonoBehaviour
 
             if (Vector3.Distance(transform.position, target.position) <= 0.3f)
             {
-                Destroy(gameObject);
+                WaveSpawner.numOfAliveEnemies--;
                 Debug.Log("Die!");
+                Destroy(gameObject);
             }
         }
     }

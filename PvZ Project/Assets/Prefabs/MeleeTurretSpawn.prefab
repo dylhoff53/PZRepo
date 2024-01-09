@@ -81,6 +81,9 @@ MonoBehaviour:
   detectLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  colliders: []
+  cubeHalfExtents: {x: 0, y: 0, z: 0}
+  attack: 0
 --- !u!1 &2439160658757958168
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,13 +312,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 2
+  fireCountdown: 0
   damage: 1
   isWall: 0
   isMelee: 1
   targetInRange: 0
+  isAOE: 0
+  health: 5
   bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 2439160659934587749}
   meleeLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  meleeDetector: {fileID: 0}
+  node: {fileID: 0}
