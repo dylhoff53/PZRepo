@@ -5,7 +5,8 @@ using UnityEngine;
 public class SceneMan : MonoBehaviour
 {
     private bool gameEnded = false;
-    public bool Died;
+    public static bool died;
+    public static bool win;
 
     // Update is called once per frame
     void Update()
@@ -13,15 +14,33 @@ public class SceneMan : MonoBehaviour
         if (gameEnded)
             return;
 
-        if(Died)
+        if(died)
         {
-            EndGame();
+            BadEnd();
         }
     }
 
-    public void EndGame()
+    public void GameEnd()
+    {
+        if (win)
+        {
+            GoodEnd();
+        } else if (died)
+        {
+            BadEnd();
+        }
+    }
+
+
+    public void BadEnd()
     {
         gameEnded = true;
         Debug.Log("Game Over!");
+    }
+
+    public void GoodEnd()
+    {
+        gameEnded = true;
+        Debug.Log("You Win!");
     }
 }

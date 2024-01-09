@@ -57,9 +57,10 @@ public class WaveSpawner : MonoBehaviour
             }
 
             spawnTimer += Time.deltaTime;
-        } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0)
+        } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0 && SceneMan.died == false)
         {
             outOfEnemies = true;
+            SceneMan.win = true;
         }
 
 
