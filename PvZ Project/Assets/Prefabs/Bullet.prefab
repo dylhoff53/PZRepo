@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
-  maxLife: 2.5
+  maxLife: 5
   lifeCounter: 0
   impactEffect: {fileID: 8879903949356753950, guid: 43fa7f4f9f112434a8212a3ce7547f8e, type: 3}
   explosionRadius: 0

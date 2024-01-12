@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{73be53e6-753b-4106-85d9-bf2d155be8ba}">
+		<property name="name">
+			<value>Gura</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9e5b4a80-7661-49ff-850a-00b03dada26f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e0bd830f-326b-44e3-a67f-65fc5fb505a1}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e0bd830f-326b-44e3-a67f-65fc5fb505a1}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

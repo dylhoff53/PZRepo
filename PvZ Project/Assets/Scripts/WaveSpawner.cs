@@ -11,9 +11,6 @@ public class WaveSpawner : MonoBehaviour
     public EnemyType[] typesOfEnemies;
 
     public float timeBetweenWaves;
-    private float countdown = 2f;
-
-    public TextMeshProUGUI waveCountdownText;
 
     public float[] spawnInters;
     public Queue<float> spawnTimes = new Queue<float>();
@@ -61,21 +58,6 @@ public class WaveSpawner : MonoBehaviour
         {
             outOfEnemies = true;
             SceneMan.win = true;
-        }
-
-
-        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-
-        waveCountdownText.text = string.Format("{0:00.00}", countdown);
-    }
-
-    IEnumerator SpawnWave()
-    {
-        waveIndex++;
-        for (int i = 0; i < waveIndex; i++)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
         }
     }
 

@@ -36,6 +36,15 @@ public class BuildManager : MonoBehaviour
             return;
         }
 
+        if(!turretToBuild.OffCooldown)
+        {
+            Debug.Log("Still on Cooldown");
+            return;
+        }
+        turretToBuild.OffCooldown = false;
+        turretToBuild.cooldownSlider.value = 1f;
+        turretToBuild.lasttimeBuilt = Time.time;
+
         PlayerStats.Money -= turretToBuild.cost;
         GameObject turret = Instantiate(turretToBuild.prefab, node.GetBuildPosition(), node.transform.rotation);
         node.tower = turret;
