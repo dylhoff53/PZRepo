@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{08b9d24c-217d-499c-87f6-ca446b0f9319}">
+		<property name="assetPath">
+			<value>SFX/Units/Towers/KFP/kfp_generate (5).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0178684807256235</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9822f2fb-4816-49a1-b9f0-7d767106efce}</destination>
+		</relationship>
+	</object>
+</objects>

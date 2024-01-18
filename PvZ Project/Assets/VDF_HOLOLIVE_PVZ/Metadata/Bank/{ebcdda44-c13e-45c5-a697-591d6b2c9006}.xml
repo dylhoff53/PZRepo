@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{ebcdda44-c13e-45c5-a697-591d6b2c9006}">
+		<property name="name">
+			<value>Voices</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a3ccf373-6cf7-418c-913f-d7da077f2a8d}</destination>
+		</relationship>
+	</object>
+</objects>

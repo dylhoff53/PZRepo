@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
     public float explosionRadius = 0f;
     public int damage;
+    public Turret turret;
+
 
     // Update is called once per frame
     void Update()
@@ -26,9 +28,6 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit");
-        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 2f);
 
         if (explosionRadius > 0f)
         {
@@ -37,10 +36,14 @@ public class Bullet : MonoBehaviour
         {
             if (other.tag == "Enemy")
             {
+                Debug.Log("Hit");
+                GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+                Destroy(effectIns, 2f);
                 other.GetComponent<Enemy>().Hit(damage);
+                turret.PlaySound(turret.hitSound);
+                Destroy(gameObject);
             }
         }
-        Destroy(gameObject);
     }
 
     public void Explode()

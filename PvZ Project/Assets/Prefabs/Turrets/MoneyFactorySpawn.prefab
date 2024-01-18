@@ -147,9 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa71825d8b53e9e409f53439377e8995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 5
+  maxTime: 30
   timer: 0
   moneyValue: 25
+  healingAmount: 500
+  tp: {fileID: 0}
+  generationSound: event:/SFX/Units/Towers/KFP/GenerationAndHeal
 --- !u!114 &5211340246221364243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +172,9 @@ MonoBehaviour:
   isMelee: 0
   targetInRange: 0
   isAOE: 0
-  health: 5
+  health: 425
+  maxHealth: 425
+  isTalent: 0
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 0}
@@ -177,7 +182,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   meleeDetector: {fileID: 0}
+  blueprint:
+    prefab: {fileID: 0}
+    cost: 0
+    towerCooldown: 0
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 0}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
+  talent: {fileID: 0}
   node: {fileID: 0}
+  attackSound: 
+  hitSound: 
+  deathSound: event:/SFX/Units/Towers/KFP/Death
 --- !u!54 &5825361847649396861
 Rigidbody:
   m_ObjectHideFlags: 0

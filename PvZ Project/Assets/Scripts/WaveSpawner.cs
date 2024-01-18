@@ -17,8 +17,6 @@ public class WaveSpawner : MonoBehaviour
     public float spawnTimer;
     public bool outOfEnemies;
 
-    private int waveIndex = 0;
-
     public float[] weights;
     public float[] enemyWeights;
     public static int numOfAliveEnemies;

@@ -111,12 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628a59c8847e5824aa91e42d88abf4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 8
+  health: 100000
   isMoving: 1
   isAttacking: 0
   attackCooldown: 0
   attackRate: 1
-  damage: 1
+  damage: 10000
   raycastRange: 2
   meleeLayerMask:
     serializedVersion: 2
@@ -125,8 +125,6 @@ MonoBehaviour:
   detector: {fileID: 4704680948186813759}
   meleePoint: {fileID: 4704680947271120548}
   targetTurret: {fileID: 0}
-  parent: {fileID: 3709930960452933684}
-  waveSpawner: {fileID: 0}
 --- !u!54 &2423085668069281005
 Rigidbody:
   m_ObjectHideFlags: 0

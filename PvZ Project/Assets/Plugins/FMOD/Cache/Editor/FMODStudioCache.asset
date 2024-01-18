@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8453025225811844361
+--- !u!114 &-9144436792345458357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,22 +9,106 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level/Ame
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ina/Attack
   m_EditorClassIdentifier: 
-  Name: Ame
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3253757447
-    data2: 463263203
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-8291418132633709848
+  Path: event:/SFX/Units/Talents/Ina/Attack
+  Guid:
+    Data1: -1543672630
+    Data2: 1322625675
+    Data3: 694291122
+    Data4: -350780596
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-9130190345537484881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Kiara/Placement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Kiara/Placement
+  Guid:
+    Data1: -1266230484
+    Data2: 1299705061
+    Data3: 1758841267
+    Data4: -1345755777
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8642382220772937847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Chumbud/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Chumbud/Attack
+  Guid:
+    Data1: 816280858
+    Data2: 1126891221
+    Data3: -142688598
+    Data4: 477408820
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1655
+--- !u!114 &-7942286870215506379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Takodachi/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Takodachi/Death
+  Guid:
+    Data1: -469625151
+    Data2: 1225803209
+    Data3: -1460759651
+    Data4: -1867184020
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7170976278288249132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,12 +118,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level/Gura
+  m_Name: parameter:/1-1/Gura
   m_EditorClassIdentifier: 
   Name: Gura
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 2
   Default: 0
   ID:
     data1: 3092766707
@@ -48,7 +132,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7311741539152574104
+--- !u!114 &-6639343691704711227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,80 +142,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level
+  m_Name: event:/SFX/Units/Towers/Sucorn/Death
   m_EditorClassIdentifier: 
-  Path: event:/Level
+  Path: event:/SFX/Units/Towers/Sucorn/Death
   Guid:
-    Data1: -825159168
-    Data2: 1329929621
-    Data3: -1852041040
-    Data4: 1994482640
+    Data1: -847761099
+    Data2: 1141753163
+    Data3: -893431372
+    Data4: -1427350833
   Banks:
-  - {fileID: 527501278156350506}
+  - {fileID: -6467034433973449506}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -8291418132633709848}
-  - {fileID: -8453025225811844361}
-  - {fileID: 7734795479654326747}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6986
---- !u!114 &-6299976330740634430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu
-  m_EditorClassIdentifier: 
-  Path: event:/Menu
-  Guid:
-    Data1: -100109371
-    Data2: 1333036824
-    Data3: 1650079643
-    Data4: -1373851175
-  Banks:
-  - {fileID: 527501278156350506}
-  IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 82924
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 3545687553170693907}
-  - {fileID: 2223695605646782619}
-  - {fileID: 527501278156350506}
-  EditorEvents:
-  - {fileID: -7311741539152574104}
-  - {fileID: -6299976330740634430}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 2223695605646782619}
-  StringsBanks:
-  - {fileID: 3545687553170693907}
-  cacheTime: 638405877651024056
-  cacheVersion: 131616
---- !u!114 &527501278156350506
+  Length: 0
+--- !u!114 &-6467034433973449506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,17 +169,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638405877651024056
+  Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638411303029443833
   FileSizes:
   - Name: Desktop
-    Value: 1449728
+    Value: 425888
   Exists: 1
---- !u!114 &2223695605646782619
+--- !u!114 &-6302481093109356411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/KFP/GenerationAndHeal
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/KFP/GenerationAndHeal
+  Guid:
+    Data1: 1014695945
+    Data2: 1335690118
+    Data3: -1347578736
+    Data4: 1720644809
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1107
+--- !u!114 &-6020692095386273709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,12 +221,867 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638405877650281627
+  lastModified: 638411303028728774
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2066
   Exists: 1
---- !u!114 &3545687553170693907
+--- !u!114 &-5997743512923882816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ame/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ame/Attack Hit
+  Guid:
+    Data1: 1680216520
+    Data2: 1178515962
+    Data3: -1938708841
+    Data4: 1843193358
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5559839657402421697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Takodachi/TakingDmg
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Takodachi/TakingDmg
+  Guid:
+    Data1: -1576614575
+    Data2: 1223169606
+    Data3: -1981797750
+    Data4: -1897375568
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5468675312708318259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ame/Taking DMG
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ame/Taking DMG
+  Guid:
+    Data1: 1135316205
+    Data2: 1090812733
+    Data3: -2098999158
+    Data4: 1077331020
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5399567107486772727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ina/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ina/Death
+  Guid:
+    Data1: 1725693503
+    Data2: 1180120768
+    Data3: -1180890240
+    Data4: 130961735
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4948950198436285065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Investigator/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Investigator/Attack Hit
+  Guid:
+    Data1: -272619182
+    Data2: 1141766355
+    Data3: -540460627
+    Data4: -1325019081
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4870926991328051786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Main Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Main Menu
+  Guid:
+    Data1: -100109371
+    Data2: 1333036824
+    Data3: 1650079643
+    Data4: -1373851175
+  Banks:
+  - {fileID: -3794401171448478820}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 84174
+--- !u!114 &-4651192914464303853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Calli/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Calli/Attack Hit
+  Guid:
+    Data1: -1212066274
+    Data2: 1157905608
+    Data3: -1285366358
+    Data4: -1825787469
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3980202869630999030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Gura/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Gura/Attack
+  Guid:
+    Data1: 61603059
+    Data2: 1127018822
+    Data3: 838836140
+    Data4: -971501838
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3794401171448478820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638411303029211196
+  FileSizes:
+  - Name: Desktop
+    Value: 1840288
+  Exists: 1
+--- !u!114 &-3370621674427565511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ina/Taking DMG
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ina/Taking DMG
+  Guid:
+    Data1: -217866854
+    Data2: 1200733615
+    Data3: 1988662927
+    Data4: 1657382642
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3325386507455924339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ame/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ame/Death
+  Guid:
+    Data1: 1370416503
+    Data2: 1080914147
+    Data3: 1133870222
+    Data4: 1486405829
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3044761568531054851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Kiara/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Kiara/Attack
+  Guid:
+    Data1: 1454963560
+    Data2: 1318259238
+    Data3: 2098534323
+    Data4: 1610620889
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2719561040298423457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Kiara/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Kiara/Attack Hit
+  Guid:
+    Data1: -305101766
+    Data2: 1275721061
+    Data3: 2061629324
+    Data4: -112360784
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2704558740574295010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ina/Placement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ina/Placement
+  Guid:
+    Data1: 1112721920
+    Data2: 1169909038
+    Data3: 988418958
+    Data4: 264864984
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1719117123896586222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ame/Placement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ame/Placement
+  Guid:
+    Data1: -1655059755
+    Data2: 1289463575
+    Data3: -62896965
+    Data4: 663260516
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1385533305649784368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Placement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Placement
+  Guid:
+    Data1: 2071910268
+    Data2: 1260909908
+    Data3: 1938636460
+    Data4: -1192503018
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2062
+--- !u!114 &-1304706476462157998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Worlds/World 1/1-1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Worlds/World 1/1-1
+  Guid:
+    Data1: -825159168
+    Data2: 1329929621
+    Data3: -1852041040
+    Data4: 1994482640
+  Banks:
+  - {fileID: -3794401171448478820}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7170976278288249132}
+  - {fileID: 4355935812165709084}
+  - {fileID: 3605882704246039750}
+  - {fileID: 8349012665888427713}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 36638
+--- !u!114 &-981593563145304032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Sucorn/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Sucorn/Attack
+  Guid:
+    Data1: -1891137672
+    Data2: 1290927031
+    Data3: 1467318933
+    Data4: -309187488
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2071
+--- !u!114 &-892174812097506930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu/Select
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu/Select
+  Guid:
+    Data1: 1483158244
+    Data2: 1303513342
+    Data3: 1739322030
+    Data4: -1059248598
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-832568886430488116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ina/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ina/Attack Hit
+  Guid:
+    Data1: 2080989480
+    Data2: 1176850835
+    Data3: -694932070
+    Data4: 1119506097
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-474058895190706782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Investigator/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Investigator/Death
+  Guid:
+    Data1: -802705170
+    Data2: 1224830559
+    Data3: 944793788
+    Data4: -1862716174
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-65770992134705609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Deadbeat/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Deadbeat/Attack Hit
+  Guid:
+    Data1: -1240577827
+    Data2: 1130864965
+    Data3: 1640901300
+    Data4: 253454375
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 3204758611529312771}
+  - {fileID: -6020692095386273709}
+  - {fileID: -3794401171448478820}
+  - {fileID: -6467034433973449506}
+  - {fileID: 5000452070843479810}
+  EditorEvents:
+  - {fileID: 306013723500171740}
+  - {fileID: -1304706476462157998}
+  - {fileID: -4870926991328051786}
+  - {fileID: -2704558740574295010}
+  - {fileID: 8590719521900783715}
+  - {fileID: -6302481093109356411}
+  - {fileID: 6096633010212182440}
+  - {fileID: 8294317661426073332}
+  - {fileID: 8098731280262525111}
+  - {fileID: 7882209330902011514}
+  - {fileID: -8642382220772937847}
+  - {fileID: -4651192914464303853}
+  - {fileID: -832568886430488116}
+  - {fileID: 6217402967682424055}
+  - {fileID: -9130190345537484881}
+  - {fileID: -6639343691704711227}
+  - {fileID: -2719561040298423457}
+  - {fileID: -5399567107486772727}
+  - {fileID: -5559839657402421697}
+  - {fileID: -4948950198436285065}
+  - {fileID: 5723087912223069959}
+  - {fileID: 6695780704259659594}
+  - {fileID: 6444700282892789354}
+  - {fileID: 3183119535718684591}
+  - {fileID: -3044761568531054851}
+  - {fileID: 3303470607429939661}
+  - {fileID: -3325386507455924339}
+  - {fileID: -981593563145304032}
+  - {fileID: -1385533305649784368}
+  - {fileID: 8232096421897348512}
+  - {fileID: 7407820020690808963}
+  - {fileID: -3370621674427565511}
+  - {fileID: 572910911133246640}
+  - {fileID: 4948378056025768414}
+  - {fileID: 5047294872735027997}
+  - {fileID: 1671644897510906610}
+  - {fileID: -7942286870215506379}
+  - {fileID: -5997743512923882816}
+  - {fileID: -9144436792345458357}
+  - {fileID: 101515737012792925}
+  - {fileID: -1719117123896586222}
+  - {fileID: -65770992134705609}
+  - {fileID: -892174812097506930}
+  - {fileID: 6821240990768121816}
+  - {fileID: 2583183093992199408}
+  - {fileID: -5468675312708318259}
+  - {fileID: -474058895190706782}
+  - {fileID: -3980202869630999030}
+  - {fileID: 788529876990526548}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -6020692095386273709}
+  StringsBanks:
+  - {fileID: 3204758611529312771}
+  cacheTime: 638411303029613730
+  cacheVersion: 131616
+--- !u!114 &101515737012792925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Calli/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Calli/Attack
+  Guid:
+    Data1: -256146481
+    Data2: 1277808851
+    Data3: -525105523
+    Data4: 995520096
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &306013723500171740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/FaderMusic
+  m_EditorClassIdentifier: 
+  Path: snapshot:/FaderMusic
+  Guid:
+    Data1: 1623148164
+    Data2: 1219359992
+    Data3: 1526447035
+    Data4: 1709611709
+  Banks:
+  - {fileID: -6020692095386273709}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &572910911133246640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Calli/Placement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Calli/Placement
+  Guid:
+    Data1: -1479667028
+    Data2: 1325700385
+    Data3: -2115194952
+    Data4: 136091195
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &788529876990526548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Enemies/Ghoul/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Enemies/Ghoul/Attack
+  Guid:
+    Data1: 1311285494
+    Data2: 1192195929
+    Data3: -592547172
+    Data4: -1773883687
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1671644897510906610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Investigator/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Investigator/Attack
+  Guid:
+    Data1: 1058682041
+    Data2: 1323195934
+    Data3: -2122207330
+    Data4: -1285787103
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2583183093992199408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Gura/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Gura/Death
+  Guid:
+    Data1: -162902299
+    Data2: 1114302907
+    Data3: -1116415044
+    Data4: 1660504253
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3183119535718684591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Gura/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Gura/Attack Hit
+  Guid:
+    Data1: -493337499
+    Data2: 1174949508
+    Data3: -1721225546
+    Data4: -266624807
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3204758611529312771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,12 +1096,39 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638405877650595208
+  lastModified: 638411303028869377
   FileSizes:
   - Name: Desktop
-    Value: 974
+    Value: 3426
   Exists: 1
---- !u!114 &7734795479654326747
+--- !u!114 &3303470607429939661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Calli/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Calli/Death
+  Guid:
+    Data1: -279774862
+    Data2: 1138016904
+    Data3: -505222757
+    Data4: -595133662
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3605882704246039750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,12 +1138,431 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level/Ina
+  m_Name: parameter:/1-1/Ame
+  m_EditorClassIdentifier: 
+  Name: Ame
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3253757447
+    data2: 463263203
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4355935812165709084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1-1/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2449328945
+    data2: 1092977428
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4948378056025768414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Kiara/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Kiara/Death
+  Guid:
+    Data1: -1356132434
+    Data2: 1150022275
+    Data3: -1810382927
+    Data4: -1772739508
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5000452070843479810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Voices.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Voices.bank
+  Name: Voices
+  StudioPath: bank:/Voices
+  lastModified: 638411303029613730
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
+--- !u!114 &5047294872735027997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Takodachi/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Takodachi/Attack
+  Guid:
+    Data1: -1248890952
+    Data2: 1215008609
+    Data3: -1998714712
+    Data4: 1114512576
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5723087912223069959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Gura/Placement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Gura/Placement
+  Guid:
+    Data1: -1383780780
+    Data2: 1108502845
+    Data3: -1444720245
+    Data4: 1074841287
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6096633010212182440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Calli/Taking DMG
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Calli/Taking DMG
+  Guid:
+    Data1: -1078381041
+    Data2: 1332784480
+    Data3: 2086857361
+    Data4: 698835387
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6217402967682424055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Chumbud/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Chumbud/Death
+  Guid:
+    Data1: 488671274
+    Data2: 1311577329
+    Data3: -1389298284
+    Data4: -203776890
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6444700282892789354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Deadbeat/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Deadbeat/Attack
+  Guid:
+    Data1: 301312353
+    Data2: 1090019035
+    Data3: -642349681
+    Data4: -1758998491
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6695780704259659594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu/Back
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu/Back
+  Guid:
+    Data1: 1327187809
+    Data2: 1110474354
+    Data3: -1561620092
+    Data4: -520117589
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6821240990768121816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Sucorn/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Sucorn/Attack Hit
+  Guid:
+    Data1: 1444452580
+    Data2: 1200134988
+    Data3: 1873585064
+    Data4: 106557111
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1553
+--- !u!114 &7407820020690808963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Kiara/Taking DMG
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Kiara/Taking DMG
+  Guid:
+    Data1: -2095560296
+    Data2: 1322952078
+    Data3: 2072778125
+    Data4: 1173802537
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7882209330902011514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Gura/Taking DMG
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Gura/Taking DMG
+  Guid:
+    Data1: -2085784806
+    Data2: 1107740943
+    Data3: 1278637713
+    Data4: -1862842751
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8098731280262525111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Chumbud/Attack Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Chumbud/Attack Hit
+  Guid:
+    Data1: 262365200
+    Data2: 1190899336
+    Data3: 2106525624
+    Data4: -1445486374
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8232096421897348512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/Deadbeat/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/Deadbeat/Death
+  Guid:
+    Data1: 1227227285
+    Data2: 1117772220
+    Data3: 909801344
+    Data4: -2127979328
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8294317661426073332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Towers/KFP/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Towers/KFP/Death
+  Guid:
+    Data1: 1944360463
+    Data2: 1217278454
+    Data3: 2051170963
+    Data4: -819209680
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8349012665888427713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1-1/Ina
   m_EditorClassIdentifier: 
   Name: Ina
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 2
   Default: 0
   ID:
     data1: 2287983806
@@ -215,3 +1571,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8590719521900783715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Units/Talents/Ame/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Units/Talents/Ame/Attack
+  Guid:
+    Data1: 2136583427
+    Data2: 1201594352
+    Data3: 1863178659
+    Data4: 2148100
+  Banks:
+  - {fileID: -6467034433973449506}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

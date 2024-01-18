@@ -74,4 +74,16 @@ public class Shop : MonoBehaviour
         Debug.Log("Melee Turret Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[5]);
     }
+
+    public void SelectInaTurret()
+    {
+        Debug.Log("Melee Turret Selected");
+        if(turretBlueprints[6].spawnCount == 0 && turretBlueprints[6].isTalent)
+        {
+            buildManager.SelectTurretToBuild(turretBlueprints[6]);
+        } else if(turretBlueprints[6].isTalent)
+        {
+            turretBlueprints[6].talentUI.UpgradeCheck(turretBlueprints[6]);
+        }
+    }
 }

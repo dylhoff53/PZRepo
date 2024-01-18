@@ -114,14 +114,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582be0f0cdbbc324a940b6b6572a3ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 2
+  fireRate: 1.5
   fireCountdown: 0
-  damage: 1
+  damage: 35
   isWall: 0
   isMelee: 1
   targetInRange: 0
   isAOE: 1
-  health: 5
+  health: 500
+  maxHealth: 500
+  isTalent: 0
   bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 6679810863269128328}
@@ -129,7 +131,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   meleeDetector: {fileID: 6679810862209787410}
+  blueprint:
+    prefab: {fileID: 0}
+    cost: 0
+    towerCooldown: 0
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 0}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
+  talent: {fileID: 0}
   node: {fileID: 0}
+  attackSound: event:/SFX/Units/Towers/Chumbud/Attack
+  hitSound: event:/SFX/Units/Towers/Chumbud/Attack Hit
+  deathSound: event:/SFX/Units/Towers/Chumbud/Death
 --- !u!54 &6780547796123924343
 Rigidbody:
   m_ObjectHideFlags: 0

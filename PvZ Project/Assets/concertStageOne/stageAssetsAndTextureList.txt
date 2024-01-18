@@ -1,0 +1,25 @@
+Assets                Associated Texture File
+
+Stage Floor.............stageOneMain.png
+
+Player Spawn Zone.......playerSpawn.png
+
+Foreground Lights.......stageOneMain.png
+
+Hololive Logos..........stageGlow.png
+
+Screen Housings.........stageOneMain.png
+
+Large Wireframe.........stageOneMain.png
+
+Wireframe Outer TV......stageOneMain.png
+
+Wireframe TV............stageOneMain.png
+
+Background Plane........NO TEXTURE FILE - will need movie file or image
+
+Main Screen.............NO TEXTURE FILE - will need movie file or image
+
+smallScreens............NO TEXTURE FILE - will need movie file or image
+
+tallScreens.............NO TEXTURE FILE - will need movie file or image

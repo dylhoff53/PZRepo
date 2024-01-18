@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{952e834c-df74-41ad-ba4e-fa8d178dd4c3}">
+		<property name="note">
+			<value>Ame - Piano
+Gura - Synth Lead
+Ina - Xylo/Marimba
+Kiara - Clarinet
+Calli - Synth Pluc</value>
+		</property>
+		<property name="name">
+			<value>Worlds</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9468e23e-39b1-4b93-bf4e-75a833062822}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -12,4 +12,7 @@ public class TurretBluePrint
     public float lasttimeBuilt;
     public Slider cooldownSlider;
     public bool OffCooldown = true;
+    public int spawnCount;
+    public TalentUI talentUI;
+    public bool isTalent;
 }

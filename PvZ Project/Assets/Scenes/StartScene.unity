@@ -1088,7 +1088,7 @@ MonoBehaviour:
       Data2: 1333036824
       Data3: 1650079643
       Data4: -1373851175
-    Path: event:/Menu
+    Path: event:/Music/Main Menu
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -1118,7 +1118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1397382551
 MonoBehaviour:
   m_ObjectHideFlags: 0

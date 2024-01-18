@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5873577782651868356}
   - component: {fileID: 5873577782651868344}
   - component: {fileID: 7403958206084049546}
+  - component: {fileID: 3723325812888844838}
   m_Layer: 8
   m_Name: WallTurret
   m_TagString: Turret
@@ -146,12 +147,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   fireCountdown: 0
-  damage: 1
+  damage: 0
   isWall: 1
   isMelee: 0
   targetInRange: 0
   isAOE: 0
-  health: 10
+  health: 3250
+  maxHealth: 3250
+  isTalent: 0
   bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 0}
@@ -159,7 +162,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   meleeDetector: {fileID: 0}
+  blueprint:
+    prefab: {fileID: 0}
+    cost: 0
+    towerCooldown: 0
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 0}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
+  talent: {fileID: 0}
   node: {fileID: 0}
+  attackSound: event:/SFX/Units/Towers/Takodachi/Attack
+  hitSound: event:/SFX/Units/Towers/Takodachi/TakingDmg
+  deathSound: event:/SFX/Units/Towers/Takodachi/Death
 --- !u!54 &7403958206084049546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -176,6 +193,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!114 &3723325812888844838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5873577782651868357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1576614575
+      Data2: 1223169606
+      Data3: -1981797750
+      Data4: -1897375568
+    Path: event:/SFX/Units/Towers/Takodachi/TakingDmg
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8504749209596296505
 GameObject:
   m_ObjectHideFlags: 0
