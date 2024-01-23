@@ -57,7 +57,7 @@ Maybe a fryer noise, or biting into chicken noise</value>
 			<destination>{49223b18-e621-4a18-8ae1-7bccd72658ba}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{859c917b-82bd-4680-86e9-566c11fdeb1f}</destination>
+			<destination>{44df9e35-33ce-4d9e-8f11-161bb8961499}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{8e35f4e6-42f5-43ea-b930-757dd7ace21c}">

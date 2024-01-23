@@ -16,9 +16,11 @@ public class Turret : MonoBehaviour
     public int health;
     public int maxHealth;
     public bool isTalent;
-    public float attackStartTime;
-    public bool attacking;
     public float meleeAttackDistance = 2.5f;
+    public float attackDelay;
+    public float attackSoundVolume;
+    public float hitSoundVolume;
+    public float deathSoundVolume;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -48,13 +50,9 @@ public class Turret : MonoBehaviour
         {
             if (fireCountdown >= fireRate && isMelee == false || fireCountdown >= fireRate && isMelee == true && targetInRange == true)
             {
-                Shoot();
                 fireCountdown = 0f;
-                attacking = false;
-            } else if(fireCountdown >= attackStartTime && !attacking)
-            {
-                PlaySound(attackSound);
-                attacking = true;
+                AudioManager.PlayOneShot(attackSound, attackSoundVolume, AudioManager.location);
+                Invoke("Shoot", attackDelay);
             }
             fireCountdown += Time.deltaTime;
         } else if (isTalent)
@@ -82,13 +80,13 @@ public class Turret : MonoBehaviour
                 if (Physics.Raycast(meleePoint.position, meleePoint.TransformDirection(Vector3.forward), out hit, meleeAttackDistance, meleeLayerMask))
                 {
                     hit.collider.GetComponent<Enemy>().Hit(damage);
-                    PlaySound(hitSound);
+                    AudioManager.PlayOneShot(hitSound, hitSoundVolume, AudioManager.location);
                 }
             }
             else
             {
                 meleeDetector.attack = true;
-                PlaySound(hitSound);
+                AudioManager.PlayOneShot(hitSound, hitSoundVolume, AudioManager.location);
             }
         }
     }
@@ -107,12 +105,7 @@ public class Turret : MonoBehaviour
         node.tower = null;
         blueprint.spawnCount--;
         //  BuildManager.builtTurrets.Remove(this);
-        PlaySound(deathSound);
+        AudioManager.PlayOneShot(deathSound, deathSoundVolume, AudioManager.location);
         Destroy(gameObject);
-    }
-
-    public void PlaySound(string path)
-    {
-        RuntimeManager.PlayOneShot(path, Camera.main.transform.position);
     }
 }

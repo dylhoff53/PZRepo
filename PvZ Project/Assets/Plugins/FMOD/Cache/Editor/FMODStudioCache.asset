@@ -174,7 +174,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638411303029443833
+  lastModified: 638412074253416807
   FileSizes:
   - Name: Desktop
     Value: 425888
@@ -221,10 +221,10 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638411303028728774
+  lastModified: 638412074252422935
   FileSizes:
   - Name: Desktop
-    Value: 2066
+    Value: 1660
   Exists: 1
 --- !u!114 &-5997743512923882816
 MonoBehaviour:
@@ -457,10 +457,10 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638411303029211196
+  lastModified: 638412074253130273
   FileSizes:
   - Name: Desktop
-    Value: 1840288
+    Value: 1840160
   Exists: 1
 --- !u!114 &-3370621674427565511
 MonoBehaviour:
@@ -836,7 +836,6 @@ MonoBehaviour:
   - {fileID: -6467034433973449506}
   - {fileID: 5000452070843479810}
   EditorEvents:
-  - {fileID: 306013723500171740}
   - {fileID: -1304706476462157998}
   - {fileID: -4870926991328051786}
   - {fileID: -2704558740574295010}
@@ -890,7 +889,7 @@ MonoBehaviour:
   - {fileID: -6020692095386273709}
   StringsBanks:
   - {fileID: 3204758611529312771}
-  cacheTime: 638411303029613730
+  cacheTime: 638412074253651603
   cacheVersion: 131616
 --- !u!114 &101515737012792925
 MonoBehaviour:
@@ -918,33 +917,6 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &306013723500171740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/FaderMusic
-  m_EditorClassIdentifier: 
-  Path: snapshot:/FaderMusic
-  Guid:
-    Data1: 1623148164
-    Data2: 1219359992
-    Data3: 1526447035
-    Data4: 1709611709
-  Banks:
-  - {fileID: -6020692095386273709}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
   Length: 0
 --- !u!114 &572910911133246640
 MonoBehaviour:
@@ -1096,10 +1068,10 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638411303028869377
+  lastModified: 638412074252667323
   FileSizes:
   - Name: Desktop
-    Value: 3426
+    Value: 3456
   Exists: 1
 --- !u!114 &3303470607429939661
 MonoBehaviour:
@@ -1218,7 +1190,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Voices.bank
   Name: Voices
   StudioPath: bank:/Voices
-  lastModified: 638411303029613730
+  lastModified: 638412074253651603
   FileSizes:
   - Name: Desktop
     Value: 494

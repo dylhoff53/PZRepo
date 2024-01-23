@@ -11,6 +11,7 @@ public class MoneyFactory : MonoBehaviour
     public int healingAmount;
     public Transform tp;
     public string generationSound;
+    public float generationSoundVolume;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class MoneyFactory : MonoBehaviour
     public void Money()
     {
         PlayerStats.Money += moneyValue;
-        PlaySound(generationSound);
+        AudioManager.PlayOneShot(generationSound, generationSoundVolume, AudioManager.location);
     }
 
     public void Heal()
@@ -61,10 +62,4 @@ public class MoneyFactory : MonoBehaviour
             tp.GetChild(lowestIndex).GetChild(0).GetComponent<Turret>().health += healingAmount;
         }
     }
-
-    public void PlaySound(string path)
-    {
-        RuntimeManager.PlayOneShot(path, Camera.main.transform.position);
-    }
-
 }

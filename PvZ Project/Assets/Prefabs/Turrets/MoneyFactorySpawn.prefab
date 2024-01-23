@@ -153,6 +153,7 @@ MonoBehaviour:
   healingAmount: 500
   tp: {fileID: 0}
   generationSound: event:/SFX/Units/Towers/KFP/GenerationAndHeal
+  generationSoundVolume: 0
 --- !u!114 &5211340246221364243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +176,11 @@ MonoBehaviour:
   health: 425
   maxHealth: 425
   isTalent: 0
+  meleeAttackDistance: 2.5
+  attackDelay: 0
+  attackSoundVolume: 0
+  hitSoundVolume: 0
+  deathSoundVolume: 0.5
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 0}

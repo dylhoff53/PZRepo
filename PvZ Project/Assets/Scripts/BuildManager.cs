@@ -8,6 +8,7 @@ public class BuildManager : MonoBehaviour
     public static BuildManager instance;
     public static GameObject turretParent;
     public string placementSound;
+    public float placementSoundVolume;
 
     private void Awake()
     {
@@ -73,7 +74,7 @@ public class BuildManager : MonoBehaviour
         turretToBuild = null;
         GameObject effect = Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 3f);
-        RuntimeManager.PlayOneShot(placementSound, Camera.main.transform.position);
+        AudioManager.PlayOneShot(placementSound, placementSoundVolume, AudioManager.location);
 
         Debug.Log("Turret build! Money left: " + PlayerStats.Money);
 

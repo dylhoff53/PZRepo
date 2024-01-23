@@ -57,7 +57,7 @@ Try sharpening two knives against each other</value>
 			<destination>{a0195ae6-cc17-4681-8a79-3440ff886c0b}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{859c917b-82bd-4680-86e9-566c11fdeb1f}</destination>
+			<destination>{44df9e35-33ce-4d9e-8f11-161bb8961499}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{2fa5af32-02a6-4f55-ba89-2e3483ae0997}">

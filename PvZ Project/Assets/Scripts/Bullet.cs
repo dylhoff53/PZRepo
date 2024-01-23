@@ -37,10 +37,10 @@ public class Bullet : MonoBehaviour
             if (other.tag == "Enemy")
             {
                 Debug.Log("Hit");
-                GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+                GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
                 Destroy(effectIns, 2f);
                 other.GetComponent<Enemy>().Hit(damage);
-                turret.PlaySound(turret.hitSound);
+                AudioManager.PlayOneShot(turret.hitSound, turret.hitSoundVolume, AudioManager.location);
                 Destroy(gameObject);
             }
         }

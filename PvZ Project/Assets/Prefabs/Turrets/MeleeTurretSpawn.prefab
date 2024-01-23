@@ -322,6 +322,11 @@ MonoBehaviour:
   health: 2500
   maxHealth: 2500
   isTalent: 0
+  meleeAttackDistance: 2.5
+  attackDelay: 0
+  attackSoundVolume: 0.5
+  hitSoundVolume: 0.5
+  deathSoundVolume: 0.5
   bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 2439160659934587749}

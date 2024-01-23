@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour
     public float attackRate;
     public int damage;
     public float raycastRange;
+    public bool isShielded;
+    public int bonusHealth;
+    public bool isShield;
+    public int shieldGiven;
+    public ShieldingEnemy shield;
 
 
     public LayerMask meleeLayerMask;
@@ -18,20 +23,21 @@ public class Enemy : MonoBehaviour
     public EnemyDetector detector;
     public Transform meleePoint;
     public GameObject targetTurret;
+    public GameObject parent;
 
     private void Start()
     {
-        attackCooldown = attackRate;
+        attackCooldown = 0f;
     }
-    private void Update()
+    public virtual void Update()
     {
         if(isAttacking)
         {
-            attackCooldown -= Time.deltaTime;
-            if(attackCooldown <= 0f)
+            attackCooldown += Time.deltaTime;
+            if(attackCooldown >= attackRate)
             {
                 Attack();
-                attackCooldown = attackRate;
+                attackCooldown = 0f;
             }
         }
     }
@@ -54,16 +60,50 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Hit(int damage)
+    public virtual void Hit(int damage)
     {
-        health -= damage;
+        if(bonusHealth > 0)
+        {
+            bonusHealth -= damage;
+            if (isShielded)
+            {
+                shieldGiven -= damage;
+            }
+            if(bonusHealth <= 0)
+            {
+                health += bonusHealth;
+                bonusHealth = 0;
+                BonusHealthBreak();
+            } else if(isShielded && shieldGiven <= 0)
+            {
+                ShieldBreak();
+            }
+        } else if(bonusHealth <= 0)
+        {
+            health -= damage;
+        }
         if(health <= 0)
         {
             Death();
         }
     }
 
-    public void Attack()
+    public virtual void BonusHealthBreak()
+    {
+        if (isShielded)
+        {
+            ShieldBreak();
+        }
+    }
+
+    public void ShieldBreak()
+    {
+        isShielded = false;
+        shield.Death();
+        shield = null;
+    }
+
+    public virtual void Attack()
     {
         RaycastHit hit;
         if (Physics.Raycast(meleePoint.position, meleePoint.TransformDirection(Vector3.forward), out hit, raycastRange, meleeLayerMask))
@@ -72,11 +112,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Death()
+    public virtual void Death()
     {
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         WaveSpawner.numOfAliveEnemies--;
         Destroy(effect, 3f);
-        Destroy(gameObject);
+        Destroy(parent);
     }
 }
