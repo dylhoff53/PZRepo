@@ -226,8 +226,10 @@ MonoBehaviour:
   damage: 75
   raycastRange: 2
   isShielded: 0
-  shieldModel: {fileID: 3894537375928303821}
-  bonusHealth: 300
+  bonusHealth: 250
+  isShield: 0
+  shieldGiven: 0
+  shield: {fileID: 0}
   meleeLayerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -363,10 +365,5 @@ PrefabInstance:
 --- !u!4 &3894537375928303816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1215417721220503854, guid: d8871bb9b8f55bb479ed657d689965f4, type: 3}
-  m_PrefabInstance: {fileID: 2797345467353029094}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3894537375928303821 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1215417721220503851, guid: d8871bb9b8f55bb479ed657d689965f4, type: 3}
   m_PrefabInstance: {fileID: 2797345467353029094}
   m_PrefabAsset: {fileID: 0}

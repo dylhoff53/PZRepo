@@ -6,33 +6,41 @@ using FMODUnity;
 public class Turret : MonoBehaviour
 {
 
-    public float fireRate;
-    public float fireCountdown = 0f;
-    public int damage;
+    [Header("Turret Identifiers")]
     public bool isWall;
     public bool isMelee;
     public bool targetInRange;
-    public bool isAOE;  
+    public bool isAOE;
+    public bool isTalent;
+
+    [Header("Basic Stats")]
+    public float fireRate;
+    public float fireCountdown = 0f;
+    public int damage;
     public int health;
     public int maxHealth;
-    public bool isTalent;
-    public float meleeAttackDistance = 2.5f;
     public float attackDelay;
-    public float attackSoundVolume;
-    public float hitSoundVolume;
-    public float deathSoundVolume;
 
+    [Header("Ranged Stats")]
     public GameObject bulletPrefab;
     public Transform firePoint;
+
+    [Header("Melee Stats")]
     public Transform meleePoint;
     public LayerMask meleeLayerMask;
     public MeleeDetector meleeDetector;
-    public TurretBluePrint blueprint;
-    public Talent talent;
-    public Node node;
+    public float meleeAttackDistance = 2.5f;
+
+    [Header("Audio")]
+    public float attackSoundVolume;
+    public float hitSoundVolume;
+    public float deathSoundVolume;
     public string attackSound;
     public string hitSound;
     public string deathSound;
+
+    public TurretBluePrint blueprint;
+    public Node node;
 
 
 
@@ -44,9 +52,9 @@ public class Turret : MonoBehaviour
         }
     }
 
-    public void Update()
+    public virtual void Update()
     {
-        if(!isWall && !isTalent)
+        if(!isWall)
         {
             if (fireCountdown >= fireRate && isMelee == false || fireCountdown >= fireRate && isMelee == true && targetInRange == true)
             {
@@ -55,18 +63,14 @@ public class Turret : MonoBehaviour
                 Invoke("Shoot", attackDelay);
             }
             fireCountdown += Time.deltaTime;
-        } else if (isTalent)
-        {
-
         }
     }
 
-    public void Shoot()
+    public virtual void Shoot()
     {
         if(!isMelee)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
 
             bullet.GetComponent<Bullet>().damage = damage;
             bullet.GetComponent<Bullet>().turret = this;
@@ -100,11 +104,10 @@ public class Turret : MonoBehaviour
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         node.tower = null;
         blueprint.spawnCount--;
-        //  BuildManager.builtTurrets.Remove(this);
         AudioManager.PlayOneShot(deathSound, deathSoundVolume, AudioManager.location);
         Destroy(gameObject);
     }

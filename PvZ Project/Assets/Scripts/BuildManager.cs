@@ -9,6 +9,8 @@ public class BuildManager : MonoBehaviour
     public static GameObject turretParent;
     public string placementSound;
     public float placementSoundVolume;
+    public static TalentAbilityScript selectedAbility;
+    public Transform activeAbilityParent;
 
     private void Awake()
     {
@@ -24,7 +26,7 @@ public class BuildManager : MonoBehaviour
     public GameObject buildEffect;
 
 
-    private TurretBluePrint turretToBuild;
+    public static TurretBluePrint turretToBuild;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
@@ -43,16 +45,13 @@ public class BuildManager : MonoBehaviour
             return;
         }
 
-        if (turretToBuild.prefab.transform.GetChild(0).GetComponent<Turret>().isTalent && turretToBuild.spawnCount > 0)
-        {
-            Debug.Log("Talent is already on the field!");
-            return;
-        }
-
         if (turretToBuild.prefab.transform.GetChild(0).GetComponent<Turret>().isTalent && turretToBuild.talentUI.talentLevel == 0)
         {
             turretToBuild.talentUI.UpgradeCheck(turretToBuild);
             turretToBuild.talentUI.upgradeImage.SetActive(true);
+        } else if(turretToBuild.prefab.transform.GetChild(0).GetComponent<Turret>().isTalent && turretToBuild.talentUI.talentLevel >= 0)
+        {
+            turretToBuild.talentUI.Respawn();
         }
 
         turretToBuild.spawnCount++;
@@ -65,11 +64,13 @@ public class BuildManager : MonoBehaviour
         node.tower = turret;
         if (turretToBuild.isTalent)
         {
-            turret.GetComponent<Talent>().talentUI = turretToBuild.talentUI;
+            turret.transform.GetChild(0).GetComponent<Talent>().talentUI = turretToBuild.talentUI;
+            turretToBuild.talentUI.talent = turret.transform.GetChild(0).GetComponent<Talent>();
+            turret.transform.GetChild(0).GetComponent<Talent>().activeAbilityUIparent = activeAbilityParent;
         }
         turret.transform.GetChild(0).gameObject.GetComponent<Turret>().node = node;
         turret.transform.parent = turretParent.transform;
-
+        turret.transform.GetChild(0).gameObject.GetComponent<Turret>().blueprint = turretToBuild;
 
         turretToBuild = null;
         GameObject effect = Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);

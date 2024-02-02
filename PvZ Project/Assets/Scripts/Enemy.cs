@@ -25,6 +25,14 @@ public class Enemy : MonoBehaviour
     public GameObject targetTurret;
     public GameObject parent;
 
+    [Header("Audio")]
+    public float attackSoundVolume;
+    public float hitSoundVolume;
+    public float deathSoundVolume;
+    public string attackSound;
+    public string hitSound;
+    public string deathSound;
+
     private void Start()
     {
         attackCooldown = 0f;
@@ -42,7 +50,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         if(isAttacking)
         {

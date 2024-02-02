@@ -112,5 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
   notEnoughMoneyColor: {r: 0.8584906, g: 0.21462265, b: 0.21462265, a: 0}
+  abilityColor: {r: 1, g: 0.88304776, b: 0, a: 0}
+  secondaryColor: {r: 1, g: 0.9685585, b: 0.56037736, a: 0}
   tower: {fileID: 0}
   positionOffset: {x: 0, y: 0, z: 0}

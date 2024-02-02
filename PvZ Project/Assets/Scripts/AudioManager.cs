@@ -8,9 +8,9 @@ public class AudioManager : MonoBehaviour
     public static float volume;
     public float inputVolume;
     public static Vector3 location;
-    FMOD.Studio.VCA master;
-    FMOD.Studio.VCA music;
-    FMOD.Studio.VCA sfx;
+    public FMOD.Studio.VCA master;
+    public FMOD.Studio.VCA music;
+    public FMOD.Studio.VCA sfx;
 
     [SerializeField]
     [Range(-80f, 10f)]
@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         location = this.transform.position;
 
     }
@@ -35,11 +36,15 @@ public class AudioManager : MonoBehaviour
         music = RuntimeManager.GetVCA("vca:/Music");
         sfx = RuntimeManager.GetVCA("vca:/SFX");
     }
-    private void Update()
+
+    public void UpdateVolume(float masV, float musV, float sfxV)
     {
-        master.setVolume(DecibelToLinear(masterVolume));
-        music.setVolume(DecibelToLinear(musicVolume));
-        sfx.setVolume(DecibelToLinear(sfxVolume));
+        master.setVolume(DecibelToLinear(masV));
+        music.setVolume(DecibelToLinear(musV));
+        sfx.setVolume(DecibelToLinear(sfxV));
+        masterVolume = masV;
+        musicVolume = musV;
+        sfxVolume = sfxV;
     }
 
     public static void PlayOneShot(string path, float volume, Vector3 position = new Vector3())

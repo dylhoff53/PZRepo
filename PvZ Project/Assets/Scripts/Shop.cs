@@ -5,35 +5,43 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public TurretBluePrint standardTurret;
-    public TurretBluePrint missleLauncher;
-    public TurretBluePrint moneyFactory;
-    public TurretBluePrint wallTurret;
-    public TurretBluePrint meleeTurret;
-    public TurretBluePrint AOEMeleeTurret;
-
     public TurretBluePrint[] turretBlueprints;
+    public CurrentLoadout cL;
 
     BuildManager buildManager;
 
     private void Start()
     {
         buildManager = BuildManager.instance;
+        cL = FindObjectOfType<CurrentLoadout>();
+        for(int i = 0; i < cL.selectedLoadout.Length; i++)
+        {
+            if(cL.selectedLoadout[i] != null)
+            {
+                GameObject ui = Instantiate(cL.selectedLoadout[i]);
+                ui.transform.SetParent(transform, false);
+            }
+        }
+
     }
 
     private void Update()
     {
         foreach (TurretBluePrint blueprint in turretBlueprints)
         {
-            float timeCheck = Time.time - blueprint.lasttimeBuilt;
-            if (timeCheck <= blueprint.towerCooldown && !blueprint.OffCooldown)
+            if (!blueprint.OffCooldown)
             {
-                float percent = Time.deltaTime / blueprint.towerCooldown;
-                blueprint.cooldownSlider.value -= percent;
-            } else
-            {
-                blueprint.OffCooldown = true;
-                blueprint.cooldownSlider.value = 0f;
+                if(!blueprint.isTalent || blueprint.isTalent && blueprint.spawnCount == 0)
+                {
+                    float percent = Time.deltaTime / blueprint.towerCooldown;
+                    blueprint.cooldownSlider.value -= percent;
+                }
+                
+                if (blueprint.cooldownSlider.value <= 0f)
+                {
+                    blueprint.OffCooldown = true;
+                    blueprint.cooldownSlider.value = 0f;
+                }
             }
         }
     }
@@ -41,49 +49,72 @@ public class Shop : MonoBehaviour
 
     public void SelectStanderdTurret()
     {
-        Debug.Log("Main Turret Selected");
+        Debug.Log("Surcorn Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[0]);
+        BuildManager.selectedAbility = null;
     }
 
     public void SelectOtherTurret()
     {
         Debug.Log("Other Turret Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[1]);
+        BuildManager.selectedAbility = null;
     }
 
     public void SelectMoneyFactory()
     {
-        Debug.Log("Money Factory Selected");
+        Debug.Log("KFP Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[2]);
+        BuildManager.selectedAbility = null;
     }
 
     public void SelectWallTurret()
     {
-        Debug.Log("Wall Turret Selected");
+        Debug.Log("Tako Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[3]);
+        BuildManager.selectedAbility = null;
     }
 
     public void SelectMeleeTurret()
     {
-        Debug.Log("Melee Turret Selected");
+        Debug.Log("Deadbeat Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[4]);
+        BuildManager.selectedAbility = null;
     }
 
     public void SelectAOEMeleeTurret()
     {
-        Debug.Log("Melee Turret Selected");
+        Debug.Log("Chumbud Selected");
         buildManager.SelectTurretToBuild(turretBlueprints[5]);
+        BuildManager.selectedAbility = null;
     }
 
     public void SelectInaTurret()
     {
-        Debug.Log("Melee Turret Selected");
+        Debug.Log("Ina Selected");
         if(turretBlueprints[6].spawnCount == 0 && turretBlueprints[6].isTalent)
         {
             buildManager.SelectTurretToBuild(turretBlueprints[6]);
+            BuildManager.selectedAbility = null;
         } else if(turretBlueprints[6].isTalent)
         {
             turretBlueprints[6].talentUI.UpgradeCheck(turretBlueprints[6]);
+            BuildManager.selectedAbility = null;
+        }
+    }
+
+    public void SelectTalent2Turret()
+    {
+        Debug.Log("Ame Selected");
+        if (turretBlueprints[7].spawnCount == 0 && turretBlueprints[7].isTalent)
+        {
+            buildManager.SelectTurretToBuild(turretBlueprints[7]);
+            BuildManager.selectedAbility = null;
+        }
+        else if (turretBlueprints[7].isTalent)
+        {
+            turretBlueprints[7].talentUI.UpgradeCheck(turretBlueprints[7]);
+            BuildManager.selectedAbility = null;
         }
     }
 }
