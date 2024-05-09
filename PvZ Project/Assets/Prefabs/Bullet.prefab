@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1860602177995605534}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   impactEffect: {fileID: 8879903949356753950, guid: 43fa7f4f9f112434a8212a3ce7547f8e, type: 3}
   explosionRadius: 0
   damage: 1
+  turret: {fileID: 0}
 --- !u!135 &1860602177995605534
 SphereCollider:
   m_ObjectHideFlags: 0

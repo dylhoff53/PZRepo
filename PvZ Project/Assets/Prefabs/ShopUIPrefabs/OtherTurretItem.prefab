@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 7600293145322452286}
   - component: {fileID: 7600293145322452287}
   - component: {fileID: 7600293145322452280}
+  - component: {fileID: -1712775170426035550}
   m_Layer: 5
   m_Name: OtherTurretItem
   m_TagString: Untagged
@@ -576,9 +577,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectOtherTurret
+      - m_Target: {fileID: -1712775170426035550}
+        m_TargetAssemblyTypeName: TurretUIButtonConnect, Assembly-CSharp
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -608,6 +609,29 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &-1712775170426035550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600293145322452285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270a0f11ede4da34d99018ba3785bbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 0}
+  bp:
+    prefab: {fileID: 5666486903346600679, guid: d0731c237d93c8a4fb16c1568be042e9, type: 3}
+    cost: 300
+    towerCooldown: 10
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 7899744614015989240}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
 --- !u!1 &7620176959963885082
 GameObject:
   m_ObjectHideFlags: 0

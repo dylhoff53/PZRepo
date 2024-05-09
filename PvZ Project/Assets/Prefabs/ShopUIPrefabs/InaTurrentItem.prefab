@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 560740629635482316}
   - component: {fileID: 560740629635482315}
   - component: {fileID: 560740629635482312}
+  - component: {fileID: 985130816265302061}
   m_Layer: 5
   m_Name: InaTurrentItem
   m_TagString: Untagged
@@ -202,9 +203,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectInaTurret
+      - m_Target: {fileID: 985130816265302061}
+        m_TargetAssemblyTypeName: TurretUIButtonConnect, Assembly-CSharp
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,6 +255,29 @@ MonoBehaviour:
   everPlaced: 0
   price: 0
   talent: {fileID: 0}
+--- !u!114 &985130816265302061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560740629635482318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270a0f11ede4da34d99018ba3785bbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 0}
+  bp:
+    prefab: {fileID: 0}
+    cost: 0
+    towerCooldown: 0
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 0}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
 --- !u!1 &650080915268621560
 GameObject:
   m_ObjectHideFlags: 0

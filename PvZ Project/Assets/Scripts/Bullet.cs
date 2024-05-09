@@ -39,7 +39,14 @@ public class Bullet : MonoBehaviour
                 Debug.Log("Hit");
                 GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
                 Destroy(effectIns, 2f);
-                other.GetComponent<Enemy>().Hit(damage);
+                if(other.GetComponent<AbsorbEnemy>() != null)
+                {
+                    other.GetComponent<AbsorbEnemy>().BulletCheck(damage);
+                }
+                else
+                {
+                    other.GetComponent<Enemy>().Hit(damage);
+                }
                 AudioManager.PlayOneShot(turret.hitSound, turret.hitSoundVolume, AudioManager.location);
                 Destroy(gameObject);
             }
@@ -63,4 +70,6 @@ public class Bullet : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
+
+
 }

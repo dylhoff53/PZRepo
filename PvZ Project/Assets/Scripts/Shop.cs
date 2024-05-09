@@ -20,6 +20,7 @@ public class Shop : MonoBehaviour
             {
                 GameObject ui = Instantiate(cL.selectedLoadout[i]);
                 ui.transform.SetParent(transform, false);
+                turretBlueprints[i] = ui.GetComponent<TurretUIButtonConnect>().bp;
             }
         }
 
@@ -29,7 +30,7 @@ public class Shop : MonoBehaviour
     {
         foreach (TurretBluePrint blueprint in turretBlueprints)
         {
-            if (!blueprint.OffCooldown)
+            if (blueprint.prefab != null && !blueprint.OffCooldown)
             {
                 if(!blueprint.isTalent || blueprint.isTalent && blueprint.spawnCount == 0)
                 {
@@ -114,6 +115,36 @@ public class Shop : MonoBehaviour
         else if (turretBlueprints[7].isTalent)
         {
             turretBlueprints[7].talentUI.UpgradeCheck(turretBlueprints[7]);
+            BuildManager.selectedAbility = null;
+        }
+    }
+
+    public void Selected(TurretBluePrint blue)
+    {
+        for(int i = 0; i < turretBlueprints.Length; i++)
+        {
+            if(blue == turretBlueprints[i])
+            {
+                SelectTower(turretBlueprints[i]);
+            }
+        }
+    }
+
+    public void SelectTower(TurretBluePrint bp)
+    {
+        if (bp.spawnCount == 0 && bp.isTalent)
+        {
+            buildManager.SelectTurretToBuild(bp);
+            BuildManager.selectedAbility = null;
+        }
+        else if (bp.isTalent)
+        {
+            bp.talentUI.UpgradeCheck(bp);
+            BuildManager.selectedAbility = null;
+        }
+        else if(!bp.isTalent)
+        {
+            buildManager.SelectTurretToBuild(bp);
             BuildManager.selectedAbility = null;
         }
     }

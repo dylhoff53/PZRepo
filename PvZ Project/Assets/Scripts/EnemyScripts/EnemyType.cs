@@ -8,4 +8,5 @@ public class EnemyType
     public GameObject enemyPrefab;
     public float weight;
     public float laneWeight;
+    public int cost;
 }

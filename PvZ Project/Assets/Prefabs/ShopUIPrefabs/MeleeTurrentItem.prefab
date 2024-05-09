@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 1112207611574039635}
   - component: {fileID: 1112207611574039634}
   - component: {fileID: 1112207611574039637}
+  - component: {fileID: 303037498347533997}
   m_Layer: 5
   m_Name: MeleeTurrentItem
   m_TagString: Untagged
@@ -327,9 +328,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectMeleeTurret
+      - m_Target: {fileID: 303037498347533997}
+        m_TargetAssemblyTypeName: TurretUIButtonConnect, Assembly-CSharp
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -359,6 +360,29 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &303037498347533997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112207611574039632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270a0f11ede4da34d99018ba3785bbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 0}
+  bp:
+    prefab: {fileID: 1566631458841172998, guid: 4997d574d7741154689ada48c14c70da, type: 3}
+    cost: 300
+    towerCooldown: 20
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 844274751251068053}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
 --- !u!1 &1141308620497989495
 GameObject:
   m_ObjectHideFlags: 0

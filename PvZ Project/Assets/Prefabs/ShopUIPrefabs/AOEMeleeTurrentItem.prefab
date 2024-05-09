@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1388978953032816395}
   - component: {fileID: 1388978953032816394}
   - component: {fileID: 1388978953032816397}
+  - component: {fileID: 2823823896850341890}
   m_Layer: 5
   m_Name: AOEMeleeTurrentItem
   m_TagString: Untagged
@@ -124,9 +125,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectAOEMeleeTurret
+      - m_Target: {fileID: 2823823896850341890}
+        m_TargetAssemblyTypeName: TurretUIButtonConnect, Assembly-CSharp
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -156,6 +157,29 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2823823896850341890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388978953032816392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270a0f11ede4da34d99018ba3785bbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 0}
+  bp:
+    prefab: {fileID: 7554537850618748907, guid: a4608359c1dfefb4f8554c60372fee76, type: 3}
+    cost: 200
+    towerCooldown: 10
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 1701948859787139021}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
 --- !u!1 &1440941002352708655
 GameObject:
   m_ObjectHideFlags: 0

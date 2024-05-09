@@ -21,6 +21,11 @@ public class WaveSpawner : MonoBehaviour
     public float[] enemyWeights;
     public static int numOfAliveEnemies;
 
+    public int points;
+    public float pointTimer;
+    public float pointGainInterval;
+    public bool canGetPoints;
+
     private void Start()
     {
         for (int i = 0; i < spawnInters.Length; i++)
@@ -44,14 +49,22 @@ public class WaveSpawner : MonoBehaviour
 
         if(spawnTimes.Count != 0)
         {
+            spawnTimer += Time.deltaTime;
             if (spawnTimer >= spawnTimes.Peek())
             {
                 spawnTimes.Dequeue();
                 spawnTimer = 0f;
                 SpawnEnemy();
             }
-
-            spawnTimer += Time.deltaTime;
+            if (canGetPoints)
+            {
+                pointTimer += Time.deltaTime;
+                if(pointTimer >= pointGainInterval)
+                {
+                    pointTimer = 0f;
+                    points++;
+                }
+            }
         } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0 && SceneMan.died == false)
         {
             outOfEnemies = true;
@@ -77,6 +90,11 @@ public class WaveSpawner : MonoBehaviour
         numOfAliveEnemies++;
         GameObject enemy = Instantiate(typesOfEnemies[chosenEnemyType].enemyPrefab, spawns[spawnLane].GetComponent<Lane>().spawn.position, spawns[spawnLane].GetComponent<Lane>().spawn.rotation);
         enemy.GetComponent<EnemyMovement>().target = spawns[spawnLane].GetComponent<Lane>().target;
+    }
+
+    public void PointsCheck()
+    {
+
     }
 
 
@@ -110,4 +128,6 @@ public class WaveSpawner : MonoBehaviour
             }
         }
     }
+
+
 }

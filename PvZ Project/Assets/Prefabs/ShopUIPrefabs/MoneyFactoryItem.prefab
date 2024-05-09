@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 5633847939024366912}
   - component: {fileID: 5633847939024366913}
   - component: {fileID: 5633847939024366918}
+  - component: {fileID: 6263238760244128273}
   m_Layer: 5
   m_Name: MoneyFactoryItem
   m_TagString: Untagged
@@ -576,9 +577,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectMoneyFactory
+      - m_Target: {fileID: 6263238760244128273}
+        m_TargetAssemblyTypeName: TurretUIButtonConnect, Assembly-CSharp
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -608,6 +609,29 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6263238760244128273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633847939024366915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270a0f11ede4da34d99018ba3785bbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 0}
+  bp:
+    prefab: {fileID: 2567777229820911298, guid: 401fae14ade429f41bf993d8132287c0, type: 3}
+    cost: 50
+    towerCooldown: 5
+    lasttimeBuilt: 0
+    cooldownSlider: {fileID: 5401891136214183302}
+    OffCooldown: 1
+    spawnCount: 0
+    talentUI: {fileID: 0}
+    isTalent: 0
 --- !u!1 &5662878591014778468
 GameObject:
   m_ObjectHideFlags: 0

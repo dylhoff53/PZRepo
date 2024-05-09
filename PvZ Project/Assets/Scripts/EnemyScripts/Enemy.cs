@@ -54,18 +54,21 @@ public class Enemy : MonoBehaviour
     {
         if(isAttacking)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(meleePoint.position, meleePoint.TransformDirection(Vector3.forward), out hit, raycastRange, meleeLayerMask))
+            if (Physics.Raycast(meleePoint.position, meleePoint.TransformDirection(Vector3.forward), raycastRange, meleeLayerMask))
             {
                 return;
             }
             else
             {
-                isAttacking = false;
-                isMoving = true;
-                attackCooldown = attackRate;
+                March();
             }
         }
+    }
+
+    public virtual void March() {
+        isAttacking = false;
+        isMoving = true;
+        attackCooldown = 0;
     }
 
     public virtual void Hit(int damage)

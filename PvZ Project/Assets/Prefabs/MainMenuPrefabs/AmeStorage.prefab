@@ -239,6 +239,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   Storeage: {fileID: 5147619829697047990}
   currentInvenSlot: {fileID: 0}
+  itemShopUI: {fileID: 5782089368645200952, guid: e35bde3a33872ec4c9d325a0e21d75cd, type: 3}
 --- !u!1 &5147619830399602602
 GameObject:
   m_ObjectHideFlags: 0
