@@ -76,14 +76,15 @@ public class WaveSpawner : MonoBehaviour
     {
 
         float spawnNumber = Random.Range(0f, 1f);
-        float enemyChoice = Random.Range(0f, 1f);
+        //float enemyChoice = Random.Range(0f, 1f);
 
         spawnNumber = Mathf.Round(spawnNumber * 100f) / 100f;
-        enemyChoice = Mathf.Round(enemyChoice * 100f) / 100f;
+        //enemyChoice = Mathf.Round(enemyChoice * 100f) / 100f;
         Debug.Log("Spawn Number" + spawnNumber);
-        Debug.Log("Enemy Choice" + enemyChoice);
+        //Debug.Log("Enemy Choice" + enemyChoice);
+        //int chosenEnemyType = PercentCheck(enemyChoice, enemyWeights);
+        int chosenEnemyType = PointsCheck();
         int spawnLane = PercentCheck(spawnNumber, weights);
-        int chosenEnemyType = PercentCheck(enemyChoice, enemyWeights);
 
         UpdateWeights(spawnLane, typesOfEnemies[chosenEnemyType].laneWeight, weights);
         UpdateWeights(chosenEnemyType, typesOfEnemies[chosenEnemyType].weight, enemyWeights);
@@ -92,9 +93,31 @@ public class WaveSpawner : MonoBehaviour
         enemy.GetComponent<EnemyMovement>().target = spawns[spawnLane].GetComponent<Lane>().target;
     }
 
-    public void PointsCheck()
+    public int PointsCheck()
     {
-
+        int enemyType = 0;
+        bool validSpawn = false;
+        /*
+        EnemyType[] validEnemies;
+        foreach (EnemyType enemy in typesOfEnemies)
+        {
+            if (enemy.cost )
+        } */
+        while (!validSpawn)
+        {
+            float enemyChoice = Random.Range(0f, 1f);
+            enemyChoice = Mathf.Round(enemyChoice * 100f) / 100f;
+            enemyType = PercentCheck(enemyChoice, enemyWeights);
+            if (typesOfEnemies[enemyType].cost > points)
+            {
+                continue;
+            }
+            else
+            {
+                validSpawn = true;
+            }
+        }
+        return enemyType;
     }
 
 
