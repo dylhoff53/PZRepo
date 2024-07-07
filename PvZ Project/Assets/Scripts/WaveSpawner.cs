@@ -115,6 +115,7 @@ public class WaveSpawner : MonoBehaviour
             else
             {
                 validSpawn = true;
+                points -= typesOfEnemies[enemyType].cost;
             }
         }
         return enemyType;

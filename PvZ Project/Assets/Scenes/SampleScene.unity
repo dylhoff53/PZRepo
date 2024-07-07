@@ -7920,30 +7920,40 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 8229819143056151269, guid: 366ea0777802267498651b2f8d7cf782, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 0
   - enemyPrefab: {fileID: 2779964641082240022, guid: 02ab59ec64cd8044397d33634c6ad82e, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 2
   - enemyPrefab: {fileID: 8229819143056151269, guid: ea7c5143e1c7d2445a912e1a432655b2, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 4
   - enemyPrefab: {fileID: 4303801556111256885, guid: 2020a5292291b264cb17bcc30f5ab62c, type: 3}
     weight: 0.05
     laneWeight: 0.07
+    cost: 3
   - enemyPrefab: {fileID: 371905332708166325, guid: ae09e722aa903e24398274bbaabeb82e, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 6
   - enemyPrefab: {fileID: 3618322445899072139, guid: 75824b6005e8ec64887b39557894e707, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 2
   - enemyPrefab: {fileID: 5076836530425683738, guid: d2f63dfc3c2fc7f4fa6e8d0c4e9c6a12, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 4
   - enemyPrefab: {fileID: 4122286345825691970, guid: e84134f69e909144eb035a70b782f453, type: 3}
     weight: 0.05
     laneWeight: 0.05
+    cost: 4
   timeBetweenWaves: 5.5
   spawnInters:
   - 5
+  - 1
+  - 1
   spawnTimer: 0
   outOfEnemies: 0
   weights:
@@ -7961,6 +7971,10 @@ MonoBehaviour:
   - 0.125
   - 0.125
   - 0.125
+  points: 0
+  pointTimer: 0
+  pointGainInterval: 0
+  canGetPoints: 0
 --- !u!114 &1362916566
 MonoBehaviour:
   m_ObjectHideFlags: 0
