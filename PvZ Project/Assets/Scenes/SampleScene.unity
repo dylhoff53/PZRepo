@@ -8007,7 +8007,7 @@ MonoBehaviour:
   pointTimer: 0
   pointGainInterval: 10000000
   canGetPoints: 1
-  sceneManager: {fileID: 0}
+  sceneManager: {fileID: 1362916568}
 --- !u!114 &1362916566
 MonoBehaviour:
   m_ObjectHideFlags: 0
