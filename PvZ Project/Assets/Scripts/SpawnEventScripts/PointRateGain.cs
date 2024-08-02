@@ -9,6 +9,7 @@ public class PointRateGain : SpawnableEvent
 
     public override void TriggerEvent()
     {
-        base.TriggerEvent();
+        WaveSpawner.instance.pointGainInterval = newRate;
+        Debug.Log("New Point Rate: " +  newRate);
     }
 }

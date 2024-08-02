@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7920,7 +7920,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 8229819143056151269, guid: 366ea0777802267498651b2f8d7cf782, type: 3}
     weight: 0.05
     laneWeight: 0.05
-    cost: 0
+    cost: 1
   - enemyPrefab: {fileID: 2779964641082240022, guid: 02ab59ec64cd8044397d33634c6ad82e, type: 3}
     weight: 0.05
     laneWeight: 0.05
@@ -7951,9 +7951,41 @@ MonoBehaviour:
     cost: 4
   timeBetweenWaves: 5.5
   spawnInters:
-  - 5
-  - 1
-  - 1
+  - spawnTime: 15
+    isEvent: 1
+    typeOfEvent: 0
+    newPointRateGain: 1
+    numberOfPointsToGain: 0
+  - spawnTime: 1
+    isEvent: 0
+    typeOfEvent: 1
+    newPointRateGain: 0
+    numberOfPointsToGain: 5
+  - spawnTime: 2
+    isEvent: 0
+    typeOfEvent: 0
+    newPointRateGain: 0
+    numberOfPointsToGain: 0
+  - spawnTime: 1
+    isEvent: 0
+    typeOfEvent: 0
+    newPointRateGain: 0
+    numberOfPointsToGain: 0
+  - spawnTime: 2
+    isEvent: 0
+    typeOfEvent: 0
+    newPointRateGain: 0
+    numberOfPointsToGain: 0
+  - spawnTime: 2
+    isEvent: 0
+    typeOfEvent: 0
+    newPointRateGain: 0
+    numberOfPointsToGain: 0
+  - spawnTime: 5
+    isEvent: 0
+    typeOfEvent: 0
+    newPointRateGain: 0
+    numberOfPointsToGain: 0
   spawnTimer: 0
   outOfEnemies: 0
   weights:
@@ -7971,10 +8003,10 @@ MonoBehaviour:
   - 0.125
   - 0.125
   - 0.125
-  points: 0
+  points: 1
   pointTimer: 0
   pointGainInterval: 0
-  canGetPoints: 0
+  canGetPoints: 1
 --- !u!114 &1362916566
 MonoBehaviour:
   m_ObjectHideFlags: 0

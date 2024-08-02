@@ -6,14 +6,15 @@ using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
     public Transform[] spawns;
+    public static WaveSpawner instance;
 
     [SerializeField]
     public EnemyType[] typesOfEnemies;
 
     public float timeBetweenWaves;
 
-    public float[] spawnInters;
-    public Queue<float> spawnTimes = new Queue<float>();
+    public SpawnableEvent[] spawnInters;
+    public Queue<SpawnableEvent> spawnTimes = new Queue<SpawnableEvent>();
     public float spawnTimer;
     public bool outOfEnemies;
 
@@ -25,6 +26,16 @@ public class WaveSpawner : MonoBehaviour
     public float pointTimer;
     public float pointGainInterval;
     public bool canGetPoints;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("More than one BuildManager in Scene!");
+            return;
+        }
+        instance = this;
+    }
 
     private void Start()
     {
@@ -50,11 +61,21 @@ public class WaveSpawner : MonoBehaviour
         if(spawnTimes.Count != 0)
         {
             spawnTimer += Time.deltaTime;
-            if (spawnTimer >= spawnTimes.Peek())
+            if (spawnTimer >= spawnTimes.Peek().spawnTime)
             {
+                if(points > 0)
+                {
+                    if (!spawnTimes.Peek().isEvent)
+                    {
+                        SpawnEnemy();
+                    }
+                    else
+                    {
+                        spawnTimes.Peek().DoEvent();
+                    }
+                }
                 spawnTimes.Dequeue();
                 spawnTimer = 0f;
-                SpawnEnemy();
             }
             if (canGetPoints)
             {
@@ -67,6 +88,7 @@ public class WaveSpawner : MonoBehaviour
             }
         } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0 && SceneMan.died == false)
         {
+            canGetPoints = false;
             outOfEnemies = true;
             SceneMan.win = true;
         }
