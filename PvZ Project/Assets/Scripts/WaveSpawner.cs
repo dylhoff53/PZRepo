@@ -27,6 +27,8 @@ public class WaveSpawner : MonoBehaviour
     public float pointGainInterval;
     public bool canGetPoints;
 
+    public SceneMan sceneManager;
+
     private void Awake()
     {
         if (instance != null)
@@ -86,11 +88,11 @@ public class WaveSpawner : MonoBehaviour
                     points++;
                 }
             }
-        } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0 && SceneMan.died == false)
+        } else if(spawnTimes.Count <= 0 && numOfAliveEnemies <= 0 && sceneManager.died == false)
         {
             canGetPoints = false;
             outOfEnemies = true;
-            SceneMan.win = true;
+            sceneManager.win = true;
         }
     }
 

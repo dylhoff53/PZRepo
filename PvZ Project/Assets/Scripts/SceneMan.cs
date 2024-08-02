@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneMan : MonoBehaviour
 {
-    private bool gameEnded = false;
+    public bool gameEnded = false;
     public GameObject winText;
     public GameObject loseText;
-    public static bool died;
-    public static bool win;
+    public bool died;
+    public bool win;
     public CanvasGroup blue;
     public CanvasGroup red;
     private float alphaCounter = 0;
@@ -18,6 +18,10 @@ public class SceneMan : MonoBehaviour
     public int passiveIncomeValue;
     public float incomeGenerationTime;
 
+    private void Start()
+    {
+        Debug.Log("THis is a test!!!");
+    }
     // Update is called once per frame
     void Update()
     {

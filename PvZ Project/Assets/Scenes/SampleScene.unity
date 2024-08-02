@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8005,8 +8005,9 @@ MonoBehaviour:
   - 0.125
   points: 1
   pointTimer: 0
-  pointGainInterval: 0
+  pointGainInterval: 10000000
   canGetPoints: 1
+  sceneManager: {fileID: 0}
 --- !u!114 &1362916566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8048,8 +8049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7875c9cfeecbb4d81f6d39711178f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameEnded: 0
   winText: {fileID: 143514699}
   loseText: {fileID: 863536033}
+  died: 0
+  win: 0
   blue: {fileID: 1619935304}
   red: {fileID: 1235729179}
   endingTime: 3
