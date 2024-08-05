@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1879867873537839635}
   - component: {fileID: 1879867873537839634}
   - component: {fileID: 1879867873537839633}
-  - component: {fileID: 1879867873537839632}
   - component: {fileID: 3767470005726427343}
   - component: {fileID: 3969122886685563029}
+  - component: {fileID: 4300157081127289397}
   m_Layer: 7
   m_Name: ShieldEnemy
   m_TagString: Enemy
@@ -88,19 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1879867873537839632
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879867873537839599}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3767470005726427343
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,9 +136,28 @@ MonoBehaviour:
   meleePoint: {fileID: 6098537953162396294}
   targetTurret: {fileID: 0}
   parent: {fileID: 2779964641082240022}
+  attackSoundVolume: 0
+  hitSoundVolume: 0
+  deathSoundVolume: 0
+  attackSound: 
+  hitSound: 
+  deathSound: 
   shieldEffect: {fileID: 5341649784384663686, guid: 83e8958463b4fc94db87ef3ebedbc59a, type: 3}
   host: {fileID: 0}
   shieldOffset: {x: 0, y: 1, z: 0}
+--- !u!65 &4300157081127289397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879867873537839599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2779964641082240022
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,8 +250,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 2, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5, y: 2, z: 2.5}
+  m_Center: {x: 0, y: 0, z: -0.5}
 --- !u!114 &6098537951139340573
 MonoBehaviour:
   m_ObjectHideFlags: 0

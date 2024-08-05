@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 2, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5, y: 2, z: 3}
+  m_Center: {x: 0, y: 0, z: -0.75}
 --- !u!114 &246292462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +238,12 @@ MonoBehaviour:
   meleePoint: {fileID: 1999879285}
   targetTurret: {fileID: 0}
   parent: {fileID: 8229819143056151269}
+  attackSoundVolume: 0
+  hitSoundVolume: 0
+  deathSoundVolume: 0
+  attackSound: 
+  hitSound: 
+  deathSound: 
   baseSpeed: 1.25
 --- !u!1 &8229819143056151269
 GameObject:
