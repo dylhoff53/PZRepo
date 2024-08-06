@@ -8058,7 +8058,7 @@ MonoBehaviour:
   red: {fileID: 1235729179}
   endingTime: 3
   incomeTimer: 0
-  passiveIncomeValue: 400
+  passiveIncomeValue: 50
   incomeGenerationTime: 5
 --- !u!1001 &1373399085
 PrefabInstance:

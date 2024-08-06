@@ -21,10 +21,7 @@ public class SpeedEnemy : Enemy
     public override void BonusHealthBreak()
     {
         parent.GetComponent<EnemyMovement>().speed = baseSpeed;
-        if (isShielded)
-        {
-            ShieldBreak();
-        }
+        base.BonusHealthBreak();
 
     }
 
