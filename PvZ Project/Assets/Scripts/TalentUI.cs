@@ -19,17 +19,24 @@ public class TalentUI : MonoBehaviour
     public void UpgradeCheck(TurretBluePrint blueprint)
     {
         price = talentLevel - 1;
-        if(talentLevel != 0 && PlayerStats.Money >= levelPrices[price])
+        if(talentLevel != 0 && talentLevel < 5 && PlayerStats.Money >= levelPrices[price])
         {
             PlayerStats.Money -= levelPrices[price];
             talentLevel++;
             talent.LeveledUp();
-            priceText.text = "$ " + levelPrices[price + 1].ToString();
+            if(talentLevel != 5)
+            {
+                priceText.text = "$ " + levelPrices[price + 1].ToString();
+            }
+            else
+            {
+                priceText.text = "MAX";
+                gameObject.GetComponent<Button>().interactable = false;
+            }
         } else if (talentLevel == 0)
         {
             talentLevel++;
             everPlaced = true;
-            Debug.Log("Test!");
             priceText.text = "$ " + levelPrices[0].ToString();
         }
     }
@@ -39,6 +46,7 @@ public class TalentUI : MonoBehaviour
         priceText.text = "$ " + replacePrices[talentLevel - 1].ToString();
         talent.blueprint.cost = replacePrices[talentLevel - 1];
         upgradeImage.SetActive(false);
+        gameObject.GetComponent<Button>().interactable = true;
     }
     
     public void Respawn()
