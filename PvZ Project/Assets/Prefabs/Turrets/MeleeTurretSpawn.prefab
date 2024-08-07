@@ -191,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2439160659934587748}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -312,21 +312,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582be0f0cdbbc324a940b6b6572a3ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1.2
-  fireCountdown: 0
-  damage: 70
   isWall: 0
   isMelee: 1
   targetInRange: 0
   isAOE: 0
+  isTalent: 0
+  fireRate: 1.2
+  fireCountdown: 0
+  damage: 70
   health: 2500
   maxHealth: 2500
-  isTalent: 0
-  meleeAttackDistance: 2.5
   attackDelay: 0
-  attackSoundVolume: 0.5
-  hitSoundVolume: 0.5
-  deathSoundVolume: 0.5
   bulletPrefab: {fileID: 1760618987744802668, guid: 54bcad5d9c5182f4c992dd3966b75772, type: 3}
   firePoint: {fileID: 0}
   meleePoint: {fileID: 2439160659934587749}
@@ -334,6 +330,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   meleeDetector: {fileID: 0}
+  meleeAttackDistance: 3.5
+  attackSoundVolume: 0.5
+  hitSoundVolume: 0.5
+  deathSoundVolume: 0.5
+  attackSound: event:/SFX/Units/Towers/Deadbeat/Attack
+  hitSound: event:/SFX/Units/Towers/Deadbeat/Attack Hit
+  deathSound: event:/SFX/Units/Towers/Deadbeat/Death
   blueprint:
     prefab: {fileID: 0}
     cost: 0
@@ -344,11 +347,7 @@ MonoBehaviour:
     spawnCount: 0
     talentUI: {fileID: 0}
     isTalent: 0
-  talent: {fileID: 0}
   node: {fileID: 0}
-  attackSound: event:/SFX/Units/Towers/Deadbeat/Attack
-  hitSound: event:/SFX/Units/Towers/Deadbeat/Attack Hit
-  deathSound: event:/SFX/Units/Towers/Deadbeat/Death
 --- !u!54 &3186163027212467334
 Rigidbody:
   m_ObjectHideFlags: 0

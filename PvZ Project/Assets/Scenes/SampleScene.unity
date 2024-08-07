@@ -8036,7 +8036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f11e8ebb4fedb40893c977bd17eed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 100
 --- !u!114 &1362916568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8058,7 +8058,7 @@ MonoBehaviour:
   red: {fileID: 1235729179}
   endingTime: 3
   incomeTimer: 0
-  passiveIncomeValue: 400
+  passiveIncomeValue: 50
   incomeGenerationTime: 5
 --- !u!1001 &1373399085
 PrefabInstance:

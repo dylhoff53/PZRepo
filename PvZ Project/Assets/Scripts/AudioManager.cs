@@ -14,15 +14,15 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField]
     [Range(-80f, 10f)]
-    private float masterVolume;
+    public float masterVolume;
 
     [SerializeField]
     [Range(-80f, 10f)]
-    private float musicVolume;
+    public float musicVolume;
 
     [SerializeField]
     [Range(-80f, 10f)]
-    private float sfxVolume;
+    public float sfxVolume;
 
     private void Awake()
     {
