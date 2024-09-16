@@ -114,6 +114,11 @@ MonoBehaviour:
   meleeLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  nodeLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  nodeRaycastRange: 4
+  detectedNode: {fileID: 0}
   deathEffect: {fileID: 5341649784384663686, guid: 83e8958463b4fc94db87ef3ebedbc59a, type: 3}
   detector: {fileID: 4611947634341400448}
   meleePoint: {fileID: 4611947634717027355}

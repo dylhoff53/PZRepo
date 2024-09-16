@@ -14,6 +14,12 @@ public class CameraController : MonoBehaviour
     public float scrollInput;
 
 
+    public Node currentNode;
+    public Node SelectedNode;
+    public BuildManager buildManager;
+    public LayerMask nodeLayerMask;
+
+
     public void OnMovement(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
@@ -26,9 +32,31 @@ public class CameraController : MonoBehaviour
         Debug.Log(scrollInput);
     }
 
+    public void OnMouseClick(InputAction.CallbackContext context)
+    {
+        if (currentNode != null)
+        {
+            currentNode.MouseDownCheck();
+            currentNode = null;
+        }
+    }
+
+    public void OnRightMouseClick(InputAction.CallbackContext context)
+    {
+        if( BuildManager.selectedAbility != null || BuildManager.turretToBuild != null)
+        {
+            BuildManager.selectedAbility = null;
+            BuildManager.turretToBuild = null;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if(buildManager.CanBuild || BuildManager.selectedAbility != null)
+        {
+            NodeCheck();
+        }
         CameraMovement();
     }
 
@@ -74,5 +102,40 @@ public class CameraController : MonoBehaviour
         transform.Translate(move * (camMoveSpeed + acceleration) * Time.deltaTime, Space.World);
         lastInput = currentInput;
 
+    }
+
+    public void NodeCheck()
+    {
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 500f, nodeLayerMask)) {
+            SelectedNode = hit.collider.GetComponent<Node>();
+            if (SelectedNode != null) {
+                if (SelectedNode == currentNode)
+                {
+                    return;
+                }
+                else if (SelectedNode != currentNode && currentNode != null)
+                {
+                    currentNode.ResetColors();
+                    currentNode = SelectedNode;
+                    currentNode.MouseEnterCheck();
+                }
+                else if (SelectedNode != currentNode && currentNode == null)
+                {
+                    currentNode = SelectedNode;
+                    currentNode.MouseEnterCheck();
+                }
+
+            } else
+            {
+                if(currentNode != null)
+                {
+                currentNode.ResetColors(); 
+                }
+                currentNode = null;
+            }
+        }
     }
 }

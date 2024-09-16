@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Enemy : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
 
 
     public LayerMask meleeLayerMask;
+    public LayerMask nodeLayerMask;
     public GameObject deathEffect;
     public EnemyDetector detector;
     public Transform meleePoint;

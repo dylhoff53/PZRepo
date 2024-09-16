@@ -15,7 +15,7 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
 
     private Renderer rend;
-    private Color startColor;
+    public Color startColor;
 
     BuildManager buildManager;
 
@@ -31,30 +31,8 @@ public class Node : MonoBehaviour
         return transform.position + positionOffset;
     }
 
-    public void OnMouseDown()
-    {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
-
-        if (!buildManager.CanBuild && BuildManager.selectedAbility == null)
-            return;
-
-        if(tower != null && BuildManager.selectedAbility == null)
-        {
-            Debug.Log("Can't Build there! - TODO: Display on Screen.");
-            return;
-        } else if (BuildManager.selectedAbility == null)
-        {
-            buildManager.BuildTurretOn(this);
-        } else if(BuildManager.selectedAbility != null && BuildManager.selectedAbility.isTargetedAbility)
-        {
-            Debug.Log("Fired Ability!");
-            BuildManager.selectedAbility.UseAbility();
-            ResetColors();
-            Debug.Log(BuildManager.selectedAbility);
-            Debug.Log("AHHHHHHHHHHHHHHH!");
-            BuildManager.selectedAbility = null;
-        }
+    /*
+    public void OnMouseDown() {
 
     }
 
@@ -63,43 +41,14 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (!buildManager.CanBuild && BuildManager.selectedAbility == null)
-            return;
-
-        if(buildManager.CanBuild == true && buildManager.HasMoney)
-        {
-            rend.material.color = hoverColor;
-        }
-        else if(BuildManager.selectedAbility == null)
-        {
-            rend.material.color = notEnoughMoneyColor;
-        }
-
-        if(BuildManager.selectedAbility != null)
-        {
-            rend.material.color = abilityColor;
-            BuildManager.selectedAbility.targetNode = transform;
-            if (BuildManager.selectedAbility.hasSecondaryAttack)
-            {
-               Vector3 bufferedHalfExtents = new Vector3(BuildManager.selectedAbility.secondaryHalfExtents.x - 0.05f, BuildManager.selectedAbility.secondaryHalfExtents.y, BuildManager.selectedAbility.secondaryHalfExtents.z - 0.05f);
-                BuildManager.selectedAbility.nodes = Physics.OverlapBox(transform.position, bufferedHalfExtents, Quaternion.identity, BuildManager.selectedAbility.nodeLayerMask);
-                foreach(Collider node in BuildManager.selectedAbility.nodes)
-                {
-                    if(node.GetComponent<Node>() != this)
-                    {
-                        node.GetComponent<Node>().rend.material.color = secondaryColor;
-                    }
-                }
-
-            }
-        }
+        MouseEnterCheck();
     }
 
     private void OnMouseExit()
     {
         ResetColors();
     }
-
+    */
     public void ResetColors()
     {
         rend.material.color = startColor;
@@ -112,6 +61,62 @@ public class Node : MonoBehaviour
                     node.GetComponent<Node>().rend.material.color = node.GetComponent<Node>().startColor;
                 }
             }
+        }
+    }
+
+    public void MouseEnterCheck() {
+
+        if (!buildManager.CanBuild && BuildManager.selectedAbility == null)
+            return;
+
+        if (buildManager.CanBuild == true && buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else if (BuildManager.selectedAbility == null)
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
+
+        if (BuildManager.selectedAbility != null)
+        {
+            rend.material.color = abilityColor;
+            BuildManager.selectedAbility.targetNode = transform;
+            if (BuildManager.selectedAbility.hasSecondaryAttack)
+            {
+                Vector3 bufferedHalfExtents = new Vector3(BuildManager.selectedAbility.secondaryHalfExtents.x - 0.05f, BuildManager.selectedAbility.secondaryHalfExtents.y, BuildManager.selectedAbility.secondaryHalfExtents.z - 0.05f);
+                BuildManager.selectedAbility.nodes = Physics.OverlapBox(transform.position, bufferedHalfExtents, Quaternion.identity, BuildManager.selectedAbility.nodeLayerMask);
+                foreach (Collider node in BuildManager.selectedAbility.nodes)
+                {
+                    if (node.GetComponent<Node>() != this)
+                    {
+                        node.GetComponent<Node>().rend.material.color = secondaryColor;
+                    }
+                }
+
+            }
+        }
+    }
+
+    public void MouseDownCheck()
+    {
+        if (!buildManager.CanBuild && BuildManager.selectedAbility == null)
+            return;
+
+        if (tower != null && BuildManager.selectedAbility == null)
+        {
+            Debug.Log("Can't Build there! - TODO: Display on Screen.");
+            return;
+        }
+        else if (BuildManager.selectedAbility == null)
+        {
+            buildManager.BuildTurretOn(this);
+            rend.material.color = startColor;
+        }
+        else if (BuildManager.selectedAbility != null && BuildManager.selectedAbility.isTargetedAbility)
+        {
+            BuildManager.selectedAbility.UseAbility();
+            ResetColors();
         }
     }
 }

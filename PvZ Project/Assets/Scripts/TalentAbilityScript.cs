@@ -15,6 +15,7 @@ public class TalentAbilityScript : MonoBehaviour
     public Vector3 secondaryHalfExtents;
     public LayerMask nodeLayerMask;
     public Collider[] nodes;
+    public bool isTowerSeller;
 
     private void Update()
     {
@@ -33,6 +34,7 @@ public class TalentAbilityScript : MonoBehaviour
     {
         offCooldown = false;
         cooldownSlider.value = 1f;
+        BuildManager.selectedAbility = null;
 
     }
 
