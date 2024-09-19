@@ -45,6 +45,12 @@ public class CameraController : MonoBehaviour
     {
         if( BuildManager.selectedAbility != null || BuildManager.turretToBuild != null)
         {
+            if(currentNode != null)
+            {
+                currentNode.ResetColors();
+                currentNode = null;
+                SelectedNode = null;
+            }
             BuildManager.selectedAbility = null;
             BuildManager.turretToBuild = null;
         }
@@ -114,6 +120,7 @@ public class CameraController : MonoBehaviour
             if (SelectedNode != null) {
                 if (SelectedNode == currentNode)
                 {
+                    currentNode.MouseEnterCheck();
                     return;
                 }
                 else if (SelectedNode != currentNode && currentNode != null)

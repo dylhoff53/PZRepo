@@ -7,8 +7,7 @@ public class Node : MonoBehaviour
 {
     public Color hoverColor;
     public Color notEnoughMoneyColor;
-    public Color abilityColor;
-    public Color secondaryColor;
+
     [Header("Optional")]
     public GameObject tower;
 
@@ -80,7 +79,7 @@ public class Node : MonoBehaviour
 
         if (BuildManager.selectedAbility != null)
         {
-            rend.material.color = abilityColor;
+            rend.material.color = BuildManager.selectedAbility.abilityColor;
             BuildManager.selectedAbility.targetNode = transform;
             if (BuildManager.selectedAbility.hasSecondaryAttack)
             {
@@ -90,7 +89,7 @@ public class Node : MonoBehaviour
                 {
                     if (node.GetComponent<Node>() != this)
                     {
-                        node.GetComponent<Node>().rend.material.color = secondaryColor;
+                        node.GetComponent<Node>().rend.material.color = BuildManager.selectedAbility.secondaryColor;
                     }
                 }
 

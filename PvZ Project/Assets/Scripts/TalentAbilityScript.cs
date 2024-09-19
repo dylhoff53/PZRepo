@@ -16,6 +16,8 @@ public class TalentAbilityScript : MonoBehaviour
     public LayerMask nodeLayerMask;
     public Collider[] nodes;
     public bool isTowerSeller;
+    public Color abilityColor;
+    public Color secondaryColor;
 
     private void Update()
     {

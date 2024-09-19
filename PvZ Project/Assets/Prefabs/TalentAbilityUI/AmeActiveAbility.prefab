@@ -217,6 +217,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   nodes: []
+  isTowerSeller: 0
+  abilityColor: {r: 1, g: 1, b: 0, a: 0}
+  secondaryColor: {r: 1, g: 0.96862745, b: 0.56078434, a: 0}
   damage: 500
   secondaryDamage: 150
   poundHalfExtents: {x: 2, y: 2, z: 2}
