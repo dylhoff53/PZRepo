@@ -174,7 +174,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638412074253416807
+  lastModified: 638458070911839052
   FileSizes:
   - Name: Desktop
     Value: 425888
@@ -221,7 +221,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638412074252422935
+  lastModified: 638458070911738971
   FileSizes:
   - Name: Desktop
     Value: 1660
@@ -457,7 +457,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638412074253130273
+  lastModified: 638458070911819034
   FileSizes:
   - Name: Desktop
     Value: 1840160
@@ -889,7 +889,7 @@ MonoBehaviour:
   - {fileID: -6020692095386273709}
   StringsBanks:
   - {fileID: 3204758611529312771}
-  cacheTime: 638412074253651603
+  cacheTime: 638458070911849062
   cacheVersion: 131616
 --- !u!114 &101515737012792925
 MonoBehaviour:
@@ -1068,7 +1068,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638412074252667323
+  lastModified: 638458070911748979
   FileSizes:
   - Name: Desktop
     Value: 3456
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   Path: Assets/VDF_HOLOLIVE_PVZ/Build/Desktop/Voices.bank
   Name: Voices
   StudioPath: bank:/Voices
-  lastModified: 638412074253651603
+  lastModified: 638458070911849062
   FileSizes:
   - Name: Desktop
     Value: 494

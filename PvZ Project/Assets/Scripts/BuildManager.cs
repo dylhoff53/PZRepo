@@ -11,6 +11,7 @@ public class BuildManager : MonoBehaviour
     public float placementSoundVolume;
     public static TalentAbilityScript selectedAbility;
     public Transform activeAbilityParent;
+    public GameObject indicator;
 
     private void Awake()
     {
@@ -58,7 +59,7 @@ public class BuildManager : MonoBehaviour
         turretToBuild.OffCooldown = false;
         turretToBuild.cooldownSlider.value = 1f;
         turretToBuild.lasttimeBuilt = Time.time;
-
+        indicator.SetActive(false);
         PlayerStats.Money -= turretToBuild.cost;
         GameObject turret = Instantiate(turretToBuild.prefab, node.GetBuildPosition(), node.transform.rotation);
         node.tower = turret;

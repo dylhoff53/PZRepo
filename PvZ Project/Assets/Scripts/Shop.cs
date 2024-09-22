@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class Shop : MonoBehaviour
 {
     public TurretBluePrint[] turretBlueprints;
     public CurrentLoadout cL;
+    public float uiYOffset;
 
     BuildManager buildManager;
 
@@ -119,33 +121,44 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void Selected(TurretBluePrint blue)
+    public void Selected(TurretBluePrint blue, float uiIndict)
     {
         for(int i = 0; i < turretBlueprints.Length; i++)
         {
             if(blue == turretBlueprints[i])
             {
-                SelectTower(turretBlueprints[i]);
+
+                SelectTower(turretBlueprints[i], uiIndict);
             }
         }
     }
 
-    public void SelectTower(TurretBluePrint bp)
+    public void SelectTower(TurretBluePrint bp, float uiIndict)
     {
         if (bp.spawnCount == 0 && bp.isTalent)
         {
+            IndicatorOn(uiIndict);
             buildManager.SelectTurretToBuild(bp);
             BuildManager.selectedAbility = null;
         }
         else if (bp.isTalent)
         {
+            BuildManager.instance.indicator.SetActive(false);
             bp.talentUI.UpgradeCheck(bp);
             BuildManager.selectedAbility = null;
         }
         else if(!bp.isTalent)
         {
+            IndicatorOn(uiIndict);
             buildManager.SelectTurretToBuild(bp);
             BuildManager.selectedAbility = null;
         }
+    }
+
+    public void IndicatorOn(float uiIndict)
+    {
+        BuildManager.instance.indicator.SetActive(true);
+        BuildManager.instance.indicator.GetComponent<RectTransform>().position = new UnityEngine.Vector3(uiIndict, uiYOffset, 0f);
+        BuildManager.instance.indicator.GetComponent<RectTransform>().rotation = UnityEngine.Quaternion.Euler(0f, 0f, 180f);
     }
 }

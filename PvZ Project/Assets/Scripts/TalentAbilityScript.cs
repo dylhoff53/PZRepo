@@ -19,6 +19,7 @@ public class TalentAbilityScript : MonoBehaviour
     public Color abilityColor;
     public Color secondaryColor;
 
+
     private void Update()
     {
         if(!offCooldown)
@@ -37,15 +38,19 @@ public class TalentAbilityScript : MonoBehaviour
         offCooldown = false;
         cooldownSlider.value = 1f;
         BuildManager.selectedAbility = null;
-
+        BuildManager.instance.indicator.SetActive(false);
     }
 
     public void SelectAbility()
     {
         if (offCooldown)
         {
+            Debug.Log("Rotationtest!!");
             BuildManager.turretToBuild = null;
             BuildManager.selectedAbility = this;
+            BuildManager.instance.indicator.SetActive(true);
+            BuildManager.instance.indicator.GetComponent<RectTransform>().position = new Vector3(gameObject.GetComponent<RectTransform>().position.x + 125f, gameObject.GetComponent<RectTransform>().position.y, 0f);
+            BuildManager.instance.indicator.GetComponent<RectTransform>().rotation = Quaternion.Euler(0f, 0f, 90f);
         }
     }
 }

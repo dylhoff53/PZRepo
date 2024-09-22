@@ -14,7 +14,8 @@ public class TurretUIButtonConnect : MonoBehaviour
 
     public void ButtonPressed()
     {
-        shop.Selected(bp);
+
+        shop.Selected(bp, this.GetComponent<RectTransform>().position.x);
     }
 
 }

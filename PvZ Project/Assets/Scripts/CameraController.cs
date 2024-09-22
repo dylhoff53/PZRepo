@@ -19,7 +19,6 @@ public class CameraController : MonoBehaviour
     public BuildManager buildManager;
     public LayerMask nodeLayerMask;
 
-
     public void OnMovement(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
@@ -53,6 +52,7 @@ public class CameraController : MonoBehaviour
             }
             BuildManager.selectedAbility = null;
             BuildManager.turretToBuild = null;
+            BuildManager.instance.indicator.SetActive(false);
         }
     }
 
