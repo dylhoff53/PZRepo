@@ -49,7 +49,7 @@ public class ShieldingEnemy : Enemy
         }
         else
         {
-            host.Hit(damage);
+            //host.Hit(damage);
         }
     }
 

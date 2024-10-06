@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     public TurretBluePrint[] turretBlueprints;
-    public CurrentLoadout cL;
+    public SelectedLoadout cL;
     public float uiYOffset;
 
     BuildManager buildManager;
@@ -15,12 +15,11 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         buildManager = BuildManager.instance;
-        cL = FindObjectOfType<CurrentLoadout>();
-        for(int i = 0; i < cL.selectedLoadout.Length; i++)
+        for(int i = 0; i < cL.Loadouts.Length; i++)
         {
-            if(cL.selectedLoadout[i] != null)
+            if(cL.Loadouts[i] != null)
             {
-                GameObject ui = Instantiate(cL.selectedLoadout[i]);
+                GameObject ui = Instantiate(cL.Loadouts[i]);
                 ui.transform.SetParent(transform, false);
                 turretBlueprints[i] = ui.GetComponent<TurretUIButtonConnect>().bp;
             }

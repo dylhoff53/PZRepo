@@ -27,14 +27,17 @@ public class StartSceneManager : MonoBehaviour
     public float sfx;
 
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
+        /*
         master = Mathf.Lerp(-80, 10, masterVolumeSlider.value);
         music = Mathf.Lerp(-80, 10, musicVolumeSlider.value);
         sfx = Mathf.Lerp(-80, 10, sfxVolumeSlider.value);
-        am.UpdateVolume(master, music, sfx);
-
+        */
+    }
+    // Update is called once per frame
+    void Update()
+    {
         if (clicked == true)
         {
             counter -= muti * Time.deltaTime;
@@ -44,7 +47,6 @@ public class StartSceneManager : MonoBehaviour
                 Invoke("Change", 1.5f);
             }
         }
-
     }
 
     public void GotClicked()
@@ -74,5 +76,51 @@ public class StartSceneManager : MonoBehaviour
     {
         optionsMenu.SetActive(false);
         mainMenu.SetActive(true);
+    }
+
+    public void setMasterVolumeSlider()
+    {
+        PlayerPrefs.SetFloat("MasterVolume", masterVolumeSlider.value);
+        master = Mathf.Lerp(-80, 10, masterVolumeSlider.value);
+        am.UpdateVolume(master, music, sfx);
+    }
+
+    public void setMusicVolumeSlider()
+    {
+        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
+        music = Mathf.Lerp(-80, 10, musicVolumeSlider.value);
+        am.UpdateVolume(master, music, sfx);
+    }
+
+    public void setSFXVolumeSlider()
+    {
+        PlayerPrefs.SetFloat("SFXVolume", sfxVolumeSlider.value);
+        sfx = Mathf.Lerp(-80, 10, sfxVolumeSlider.value);
+        am.UpdateVolume(master, music, sfx);
+    }
+
+    public void UpdateSliderValues()
+    {
+        if(PlayerPrefs.HasKey("MasterVolume"))
+        {
+            masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        }
+
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        }
+
+        if (PlayerPrefs.HasKey("SFXVolume"))
+        {
+            sfxVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        }
+        //am.UpdateVolume(master, music, sfx);
+    }
+
+    private void OnEnable()
+    {
+        UpdateSliderValues();
+        cL.Clear();
     }
 }

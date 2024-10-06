@@ -2836,7 +2836,7 @@ MonoBehaviour:
     spawnCount: 0
     talentUI: {fileID: 0}
     isTalent: 0
-  cL: {fileID: 0}
+  cL: {fileID: 11400000, guid: c6d0fdfddd9971c4dbd0a1c41fd14d10, type: 2}
   uiYOffset: 200
 --- !u!114 &488337532
 MonoBehaviour:

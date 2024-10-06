@@ -73,4 +73,9 @@ public class AudioManager : MonoBehaviour
         float linear = Mathf.Pow(10.0f, dB / 20f);
         return linear;
     }
+
+    public void UpdateStartMenu()
+    {
+
+    }
 }

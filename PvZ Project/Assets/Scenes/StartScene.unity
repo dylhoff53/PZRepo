@@ -523,7 +523,6 @@ GameObject:
   m_Component:
   - component: {fileID: 202806183}
   - component: {fileID: 202806182}
-  - component: {fileID: 202806184}
   m_Layer: 0
   m_Name: JumpManager
   m_TagString: Untagged
@@ -562,38 +561,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &202806184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202806181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19504b4c3baa6ec438967ec86f8bcac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory:
-  - {fileID: 1119356058847381231}
-  - {fileID: 994050689}
-  - {fileID: 521453748}
-  - {fileID: 403955810}
-  - {fileID: 1626846756}
-  - {fileID: 1675007907}
-  - {fileID: 1853362380}
-  - {fileID: 181048268}
-  - {fileID: 405369459}
-  selectedLoadout:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &204801380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +1986,19 @@ MonoBehaviour:
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823985485}
+        m_TargetAssemblyTypeName: StartSceneManager, Assembly-CSharp
+        m_MethodName: setMasterVolumeSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &703826783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,6 +2383,7 @@ GameObject:
   - component: {fileID: 823985481}
   - component: {fileID: 823985485}
   - component: {fileID: 823985486}
+  - component: {fileID: 823985487}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -2515,7 +2495,7 @@ MonoBehaviour:
   musicVolumeSlider: {fileID: 1022083486}
   am: {fileID: 202806182}
   mainMenu: {fileID: 952564245}
-  cL: {fileID: 202806184}
+  cL: {fileID: 823985487}
   selectionMenu: {fileID: 703826783}
   counter: 1
   clicked: 0
@@ -2536,6 +2516,29 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &823985487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823985480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19504b4c3baa6ec438967ec86f8bcac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory:
+  - {fileID: 1119356058847381231}
+  - {fileID: 994050689}
+  - {fileID: 521453748}
+  - {fileID: 403955810}
+  - {fileID: 1626846756}
+  - {fileID: 1675007907}
+  - {fileID: 1853362380}
+  - {fileID: 181048268}
+  - {fileID: 405369459}
+  currentLoadout: {fileID: 11400000, guid: c6d0fdfddd9971c4dbd0a1c41fd14d10, type: 2}
 --- !u!1 &836161733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,7 +3161,19 @@ MonoBehaviour:
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823985485}
+        m_TargetAssemblyTypeName: StartSceneManager, Assembly-CSharp
+        m_MethodName: setMusicVolumeSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1046134583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,7 +4682,19 @@ MonoBehaviour:
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823985485}
+        m_TargetAssemblyTypeName: StartSceneManager, Assembly-CSharp
+        m_MethodName: setSFXVolumeSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1710843202
 GameObject:
   m_ObjectHideFlags: 0
