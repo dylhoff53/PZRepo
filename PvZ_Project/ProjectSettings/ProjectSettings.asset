@@ -801,11 +801,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 83d45149-79c4-448c-8fe5-d63135db06d9
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: PvZ_Project
+  organizationId: dylanhoffman651
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
